@@ -1,55 +1,36 @@
 ---
+import Author from './Author.astro';
+import Banner from './Banner.astro';
+
 export interface Props {
   post: any;
 }
 
 const { post } = Astro.props;
 ---
-<article class="post-preview">
-  <header>
-    <p class="publish-date">{post.publishDate}</p>
-    <a href={post.url}><h1 class="title">{post.title}</h1></a>
+<article class="mx-8 mb-24">
+  <div class="-mx-8">
+    <Banner srcs={post.hero} />
+  </div>
+  <header class="mb-6">
+    <h3 class="text-xl md:text-2xl lg:text-3xl font-bold relative pb-4">
+      <a href={post.url} rel="bookmark">{post.title}</a>
+    </h3>
+    <hr class="border-none bg-gradient-to-r 
+      from-gray-100 via-gray-200 to-gray-100
+      dark:from-gray-900 dark:via-gray-800 dark:to-gray-900" style="height: 1px;">
   </header>
-  <p>{post.description}</p>
-  <a href={post.url}>Read more</a>
+  <Author author={post.author} category={post.category} publishDate={post.publishDate} />
+  <p class="mb-4">{post.description}</p>
+  <div class="mb-4">
+    <a href={post.url} rel="bookmark" class="hover:text-primary">
+      Continue reading
+      <svg xmlns="http://www.w3.org/2000/svg" class="inline-block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </a>
+  </div>
 </article>
 
 <style>
-.content :global(main > * + *) {
-  margin-top: 1rem;
-}
-
-.post-preview {
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
-  border-bottom: 4px solid var(--theme-divider);
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  align-items: flex-start;
-  justify-content: center;
-
-  padding-bottom: 2rem;
-}
-
-.title,
-.author,
-.publish-date {
-  margin: 0;
-}
-
-.publish-date,
-.author {
-  font-size: 1.25rem;
-  color: var(--theme-text-lighter);
-}
-
-.title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: var(--theme-text);
-}
 </style>

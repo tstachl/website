@@ -1,0 +1,21 @@
+---
+import BannerImage from '../components/BannerImage.astro';
+import BannerYoutube from '../components/BannerYoutube.astro';
+
+export interface Props {
+  srcs: Array;
+}
+
+const { srcs } = Astro.props;
+---
+<div class="w-full h-96 flex flex-row gap-4 mb-8">
+  {srcs.map((el) => {
+    if (el.endsWith('.jpg') || el.endsWith('.png')) {
+      return <BannerImage src={el} />
+    }
+
+    if (el.includes('youtube.com')) {
+      return <BannerYoutube src={el} />
+    }
+  })}
+</div>
