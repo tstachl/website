@@ -16,3 +16,15 @@ fields:
     schema:
       format: markdown
   label: Description
+- name: author
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: authors
+      file: 
+      path: 
+  label: Author
