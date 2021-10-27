@@ -28,3 +28,36 @@ fields:
       file: 
       path: 
   label: Author
+- name: publish_date
+  type: datetime
+  label: Publish Date
+  description: ''
+  config:
+    required: false
+    date_format: ddd, MMMM DD, YYYY
+    time_format: 
+    display_utc: false
+    export_format: YYYY-MM-DDTHH:mm:ssZ
+- name: banner
+  type: image_gallery
+  config: {}
+  label: Banner
+- name: category
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Category
+- name: layout
+  type: text
+  config:
+    required: false
+  label: Layout
+  hidden: true
+  default: "../../layouts/BlogPost.astro"
