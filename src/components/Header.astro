@@ -1,5 +1,5 @@
 ---
-import ThemeToggle from './ThemeToggle.astro';
+
 ---
 
 <header class="w-full m-0 p-0 bg-cover bg-bottom">
@@ -12,12 +12,11 @@ import ThemeToggle from './ThemeToggle.astro';
       dark:from-gray-900 dark:via-gray-800 dark:to-gray-900" style="height: 1px;">
   </div>
   <div class="border-b border-gray-200 dark:border-gray-800">
-    <div class="md:container md:mx-auto break-normal p-4 grid grid-cols-2">
-      <div class="font-sans text-2xl font-bold tracking-tighter">
+    <div class="md:container md:mx-auto break-normal p-4 flex">
+      <div class="flex-auto font-sans text-2xl font-bold tracking-tighter">
         Thomas<span class="text-primary">.</span>Stachl
       </div>
-      <div>
-        <span class="float-right"><ThemeToggle /></span>
+      <div class="flex-auto">
       </div>
     </div>
   </div>

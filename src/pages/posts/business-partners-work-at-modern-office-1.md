@@ -2,7 +2,7 @@
 title: 'Business Partners Work at Modern Office'
 description: "It’s no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the industry is fast becoming overcrowded, heaving with agencies offering similar services …"
 date: 2021-10-28T00:00:00-07:00
-author: src/pages/authors/thomas.md
+author: thomas.md
 banner:
   - 'https://awcdn1.ahmad.works/alia/wp-content/uploads/2018/07/business4-people-in-the-office-consulting-a-PJNJUKK.jpg'
   - 'https://awcdn1.ahmad.works/alia/wp-content/uploads/2018/07/business4-people-in-the-office-consulting-a-PJNJUKK.jpg'

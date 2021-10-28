@@ -6,20 +6,52 @@ publish_mode: editorial_workflow
 media_folder: "public/assets"
 public_folder: "/assets"
 collections:
+  - name: "authors"
+    label: "Author"
+    folder: "src/pages/authors"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "../../layouts/Author.astro"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Photo"
+        name: "photo"
+        widget: image
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
   - name: "posts"
     label: "Post"
     folder: "src/pages/posts"
     create: true
     slug: "{{slug}}"
-    editor: preview: false
+    editor:
+      preview: false
     fields:
       - label: "Layout"
         name: "layout"
         widget: "hidden"
         default: "../../layouts/BlogPost.astro"
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "authors"
+        search_fields: ["title"]
+        value_field: "{{slug}}.md"
+        display_fields: ["title"]
       - label: "Title"
         name: "title"
         widget: "string"
+      - label: "Description"
+        name: "description"
+        widget: "text"
       - label: "Publish Date"
         name: "date"
         widget: "datetime"

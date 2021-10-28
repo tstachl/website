@@ -18,9 +18,7 @@ let permalink = 'https://stachl.me/';
 // Data Fetching: List all Markdown posts in the repo.
 
 let allPosts = Astro.fetchContent<MarkdownFrontmatter>('./posts/*.md');
-console.log(allPosts);
 allPosts = allPosts.sort((a, b) => {
-  console.log(new Date(b.date).valueOf(), new Date(a.date).valueOf());
   return new Date(b.date).valueOf() - new Date(a.date).valueOf()
 });
 ---

@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BlogPost.astro
-author: src/pages/authors/thomas.md
+author: thomas.md
 title: Video Post
 date: 2021-10-28T21:38:42.945Z
 banner:
