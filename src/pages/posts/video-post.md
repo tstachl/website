@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPost.astro
 author: src/pages/authors/thomas.md
 title: Video Post
-date: 2021-10-28T21:13:22.938Z
+date: 2021-10-28T21:38:42.945Z
 banner:
   - https://www.youtube.com/embed/sNmOrHw-77U
 description: Testing a video post.
