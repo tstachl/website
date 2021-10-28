@@ -64,3 +64,4 @@ fields:
   default: "../../layouts/BlogPost.astro"
 pages:
 - src/pages/posts/testing-a-new-post.md
+- src/pages/posts/video-post.md
