@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BlogPost.astro
-author: thomas
+author: thomas.md
 title: Testing a new Post
 description: Description for the blog post
 date: 2021-10-28T21:11:04.784Z
