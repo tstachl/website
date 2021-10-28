@@ -38,16 +38,9 @@ fields:
     time_format: 
     display_utc: false
     export_format: YYYY-MM-DDTHH:mm:ssZ
-- name: banner2
+- name: banner
   type: image_gallery
   config: {}
-  label: Banner
-- name: banner
-  type: list
-  config:
-    use_select: false
-    min: 
-    max: 
   label: Banner
 - name: category
   type: select
