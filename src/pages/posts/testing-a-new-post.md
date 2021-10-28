@@ -8,7 +8,7 @@ banner:
   - /assets/alex-diaz-aezcx1zlpkw-unsplash.jpg
   - /assets/alex-diaz-aezcx1zlpkw-unsplash.jpg
   - /assets/thomas.png
-category: Lifestyle
+category: Travel
 ---
 ## This is a test post
 

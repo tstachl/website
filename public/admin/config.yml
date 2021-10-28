@@ -7,7 +7,7 @@ media_folder: "public/assets"
 public_folder: "/assets"
 collections:
   - name: "authors"
-    label: "Author"
+    label: "Authors"
     folder: "src/pages/authors"
     create: true
     slug: "{{slug}}"
@@ -27,8 +27,23 @@ collections:
       - label: "Body"
         name: "body"
         widget: "markdown"
+  - name: "categories"
+    label: "Categories"
+    folder: "src/pages/categories"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "../../layouts/Category.astro"
+      - label: "Title"
+        name: "title"
+        widget: "string"
   - name: "posts"
-    label: "Post"
+    label: "Posts"
     folder: "src/pages/posts"
     create: true
     slug: "{{slug}}"
@@ -65,8 +80,11 @@ collections:
           widget: image
       - label: "Category"
         name: "category"
-        widget: "select"
-        options: ["Lifestyle"]
+        widget: "relation"
+        collection: "categories"
+        search_fields: ["title"]
+        value_field: "{{title}}"
+        display_fields: ["title"]
       - label: "Body"
         name: "body"
         widget: "markdown"

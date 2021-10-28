@@ -6,7 +6,7 @@ author: thomas.md
 banner:
   - 'https://www.youtube.com/embed/M7lc1UVf-VE'
 alt: 'Business Partners Work at Modern Office'
-category: 'Lifestyle'
+category: 'Travel'
 layout: '../../layouts/BlogPost.astro'
 ---
 

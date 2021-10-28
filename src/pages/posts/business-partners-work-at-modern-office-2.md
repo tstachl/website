@@ -6,7 +6,7 @@ author: thomas.md
 banner:
   - 'https://awcdn1.ahmad.works/alia/wp-content/uploads/2018/07/business4-people-in-the-office-consulting-a-PJNJUKK.jpg'
 alt: 'Business Partners Work at Modern Office'
-category: 'Lifestyle'
+category: 'Travel'
 layout: '../../layouts/BlogPost.astro'
 ---
 
