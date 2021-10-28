@@ -62,3 +62,5 @@ fields:
   label: Layout
   hidden: true
   default: "../../layouts/BlogPost.astro"
+pages:
+- src/pages/posts/testing-a-new-post.md
