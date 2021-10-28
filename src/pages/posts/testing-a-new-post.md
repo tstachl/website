@@ -1,13 +1,15 @@
 ---
+layout: ../../layouts/BlogPost.astro
 author: src/pages/authors/thomas.md
-category: Lifestyle
-layout: "../../layouts/BlogPost.astro"
 title: Testing a new Post
+date: 2021-10-28T21:11:04.784Z
+banner:
+  - /assets/alex-diaz-aezcx1zlpkw-unsplash.jpg
+  - /assets/alex-diaz-aezcx1zlpkw-unsplash.jpg
+  - /assets/thomas.png
 description: Description for the blog post
 publish_date: 2021-10-28T00:00:00-07:00
-banner:
-- "/assets/alex-diaz-aezcx1zlpkw-unsplash.jpg"
-
+category: Lifestyle
 ---
 ## This is a test post
 
