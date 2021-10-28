@@ -1,5 +1,5 @@
 ---
-import Author from './Author.astro';
+import PostMeta from './PostMeta.astro';
 import Banner from './Banner.astro';
 
 export interface Props {
@@ -20,7 +20,7 @@ const { post } = Astro.props;
       from-gray-100 via-gray-200 to-gray-100
       dark:from-gray-900 dark:via-gray-800 dark:to-gray-900" style="height: 1px;">
   </header>
-  <Author author={post.author} category={post.category} publishDate={post.publish_date} />
+  <PostMeta author={post.author} category={post.category} publishDate={post.date} />
   <p class="mb-4">{post.description}</p>
   <div class="mb-4">
     <a href={post.url} rel="bookmark" class="hover:text-primary">
@@ -31,6 +31,3 @@ const { post } = Astro.props;
     </a>
   </div>
 </article>
-
-<style>
-</style>

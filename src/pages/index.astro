@@ -1,11 +1,10 @@
 ---
 // Component Imports
-import BaseHead from '../components/BaseHead.astro';
-import BlogHeader from '../components/BlogHeader.astro';
-import BlogPostPreview from '../components/BlogPostPreview.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostPreview from '../components/PostPreview.astro';
 
 interface MarkdownFrontmatter {
-  publishDate: number;
+  date: string;
 }
 
 // Component Script:
@@ -19,23 +18,12 @@ let permalink = 'https://stachl.me/';
 // Data Fetching: List all Markdown posts in the repo.
 
 let allPosts = Astro.fetchContent<MarkdownFrontmatter>('./posts/*.md');
-allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+console.log(allPosts);
+allPosts = allPosts.sort((a, b) => {
+  console.log(new Date(b.date).valueOf(), new Date(a.date).valueOf());
+  return new Date(b.date).valueOf() - new Date(a.date).valueOf()
+});
 ---
-<html lang="en">
-  <head>
-    <BaseHead title={title} description={description} permalink={permalink} />
-    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')} >
-  </head>
-
-  <body class="min-h-screen md:text-lg lg:text-xl
-    bg-gray-100 text-gray-900 
-    dark:bg-gray-900 dark:text-gray-100">
-    <BlogHeader />
-    <main class="md:mx-auto max-w-screen-lg pt-14 px-4" aria-label="List of blog posts">
-      {allPosts.map(p => <BlogPostPreview post={p} />)}
-    </main>
-  </body>
-</html>
+<BaseLayout title={title} description={description} permalink={permalink}>
+  {allPosts.map(p => <PostPreview post={p} />)}
+</BaseLayout>

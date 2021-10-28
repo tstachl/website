@@ -11,6 +11,7 @@ collections:
     folder: "src/pages/posts"
     create: true
     slug: "{{slug}}"
+    editor: preview: false
     fields:
       - label: "Layout"
         name: "layout"
@@ -24,12 +25,12 @@ collections:
         widget: "datetime"
       - label: "Banner"
         name: "banner"
-        widget: "image"
-        choose_url: true
-        media_folder: "/public/assets/posts"
-        media_library:
-          config:
-            multiple: true
+        widget: "list"
+        summary: '{{fields.image}}'
+        field:
+          label: Image
+          name: image
+          widget: image
       - label: "Category"
         name: "category"
         widget: "select"

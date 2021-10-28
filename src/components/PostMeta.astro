@@ -1,4 +1,6 @@
 ---
+import Avatar from './Avatar.astro'
+
 export interface Props {
   author: string;
   category: string;
@@ -9,11 +11,7 @@ const { author, category, publishDate } = Astro.props;
 let page = Astro.fetchContent('../pages/authors/*.md').find((el) => el.file.href.endsWith(author));
 ---
 <div class="space-x-2 mb-6">
-  <div class="inline-block mr-2">
-    <a href={page.url}>
-      <img class="h-10 md:h-11 lg:h-12 rounded-full ring-1 ring-gray-900 dark:ring-gray-100" src="/assets/authors/thomas.png" alt="Thomas Stachl" />
-    </a>
-  </div>
+  <Avatar url={page.url} src={page.photo} name={page.title} />
   <div class="inline-block">
     <h6 class="font-bold"><a href={page.url}>{page.title}</a></h6>
     <p class="align-middle">

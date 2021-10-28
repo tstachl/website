@@ -8,7 +8,6 @@ banner:
   - /assets/alex-diaz-aezcx1zlpkw-unsplash.jpg
   - /assets/thomas.png
 description: Description for the blog post
-publish_date: 2021-10-28T00:00:00-07:00
 category: Lifestyle
 ---
 ## This is a test post
