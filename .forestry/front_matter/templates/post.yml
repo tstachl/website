@@ -47,7 +47,8 @@ fields:
   default: []
   config:
     required: false
-    options: []
+    options:
+    - Lifestyle
     source:
       type: simple
       section: 
