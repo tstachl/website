@@ -1,0 +1,16 @@
+---
+export interface Props {
+  src: string;
+}
+// src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
+
+const { src } = Astro.props;
+---
+<div class="h-full flex-1">
+  <video controls class="rounded-md object-cover h-full w-full">
+      <source src={src} type="video/mp4">
+      Sorry, your browser doesn't support embedded videos.
+  </video>
+</div>
+
+

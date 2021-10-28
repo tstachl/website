@@ -1,9 +1,10 @@
 ---
 import BannerImage from '../components/BannerImage.astro';
+import BannerVideo from '../components/BannerVideo.astro';
 import BannerYoutube from '../components/BannerYoutube.astro';
 
 export interface Props {
-  srcs: Array;
+  srcs: Array<string>;
 }
 
 const { srcs } = Astro.props;
@@ -12,6 +13,10 @@ const { srcs } = Astro.props;
   {srcs.map((el) => {
     if (el.endsWith('.jpg') || el.endsWith('.png')) {
       return <BannerImage src={el} />
+    }
+
+    if (el.endsWith('.mp4')) {
+      return <BannerVideo src={el} />
     }
 
     if (el.includes('youtube.com')) {

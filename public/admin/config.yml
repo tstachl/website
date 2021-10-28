@@ -1,0 +1,39 @@
+backend:
+  name: github
+  repo: tstachl/website
+  branch: master
+publish_mode: editorial_workflow
+media_folder: "public/assets"
+public_folder: "/assets"
+collections:
+  - name: "posts"
+    label: "Post"
+    folder: "src/pages/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "../../layouts/BlogPost.astro"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Banner"
+        name: "banner"
+        widget: "image"
+        choose_url: true
+        media_folder: "/public/assets/posts"
+        media_library:
+          config:
+            multiple: true
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["Lifestyle"]
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
