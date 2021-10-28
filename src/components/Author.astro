@@ -6,8 +6,7 @@ export interface Props {
 }
 
 const { author, category, publishDate } = Astro.props;
-let page = Astro.fetchContent('../pages/authors/*.md').find((el) => el.file.href.endsWith(`${author}.md`));
-let date = new Date(Date.parse(publishDate));
+let page = Astro.fetchContent('../pages/authors/*.md').find((el) => el.file.href.endsWith(author));
 ---
 <div class="space-x-2 mb-6">
   <div class="inline-block mr-2">
@@ -25,7 +24,7 @@ let date = new Date(Date.parse(publishDate));
         </svg>
       </span>
       <span class="inline-block align-middle">
-        {category} - <time datetime={date.toISOString()}>{new Intl.DateTimeFormat('en-US', { weekday: "short", month: "long", day: "numeric", year: "numeric" }).format(date)}</time>
+        {category} - <time datetime={publishDate}>{new Intl.DateTimeFormat('en-US', { weekday: "short", month: "long", day: "numeric", year: "numeric" }).format(new Date(publishDate))}</time>
       </span>
     </p>
   </div>
