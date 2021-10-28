@@ -37,16 +37,5 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
     <main class="md:mx-auto max-w-screen-lg pt-14 px-4" aria-label="List of blog posts">
       {allPosts.map(p => <BlogPostPreview post={p} />)}
     </main>
-    <!-- <div class="layout">
-      <main class="content">
-        <section class="intro">
-          <h1 class="latest">{title}</h1>
-          <p>{description}</p>
-        </section>
-        <section aria-label="Blog post list">
-          
-        </section>
-      </main>
-    </div> -->
   </body>
 </html>
