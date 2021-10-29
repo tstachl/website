@@ -10,7 +10,7 @@ export interface Props {
 
 let { title, description, permalink } = Astro.props;
 
-if (!title.includes('Stachl')) title += ' - Thomas Stachl';
+if (!title.endsWith('Thomas Stachl')) title += ' - Thomas Stachl';
 
 ---
 <html lang="en">
@@ -49,8 +49,8 @@ if (!title.includes('Stachl')) title += ' - Thomas Stachl';
   </head>
 
   <body class="min-h-screen md:text-lg lg:text-xl
-    bg-gray-100 text-gray-900 
-    dark:bg-gray-900 dark:text-gray-100">
+    bg-gray-100 text-gray-800 
+    dark:bg-gray-900 dark:text-gray-300">
     <Header />
     <main class="md:mx-auto max-w-screen-lg pt-14 px-4">
       <slot />

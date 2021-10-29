@@ -1,0 +1,20 @@
+---
+export interface Props {
+  category: string;
+  publishDate: string;
+}
+
+// collection
+import categoryData from "../data/categories.json"
+
+let category = categoryData[Astro.props.category];
+let publishDate = Astro.props.publishDate;
+---
+<div class="mb-6 text-sm text-primary">
+  <span class="uppercase">
+    <a href={category.url} rel="category">{category.name}</a>
+  </span>
+  <span class="relative pl-14 before:absolute before:w-8 before:h-px before:bg-primary before:left-3 before:top-[calc(50%-1px)]">
+    <time datetime={publishDate}>{new Intl.DateTimeFormat('en-US', { month: "long", day: "numeric", year: "numeric" }).format(new Date(publishDate))}</time>
+  </span>
+</div>

@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogPost.astro
+layout: ../../layouts/Post.astro
 author: thomas.md
 title: Testing a new Post
 description: Description for the blog post
@@ -8,7 +8,7 @@ banner:
   - /assets/alex-diaz-aezcx1zlpkw-unsplash.jpg
   - /assets/alex-diaz-aezcx1zlpkw-unsplash.jpg
   - /assets/thomas.png
-category: Travel
+category: wisdom
 ---
 ## This is a test post
 

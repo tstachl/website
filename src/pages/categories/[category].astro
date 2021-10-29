@@ -1,0 +1,40 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import Preview from "../../components/Preview.astro"
+
+// collection
+import categoryData from "../../data/categories.json"
+
+interface MarkdownFrontmatter {
+  date: string;
+  description: string;
+  title: string;
+  category: string;
+}
+
+export function getStaticPaths() {
+  const allPosts = Astro.fetchContent('../posts/*.md');
+  let allCategoriesUnique = [...new Set(allPosts.map(p => p.category))];
+  return allCategoriesUnique.map(category => ({params: {category}, props: {allPosts}}));
+}
+
+const { allPosts } = Astro.props;
+const { params } = Astro.request;
+
+// page
+let title = categoryData[params.category].name;
+let description = categoryData[params.category].description;
+let canonicalURL = Astro.request.canonicalURL.toString();
+
+/** filter posts by category, sort by date */
+const posts = allPosts
+  .filter((post) => post.category === params.category)
+  .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
+---
+<Layout 
+  title={title}
+  description={description}
+  permalink={canonicalURL}>
+  <h1 class="text-center text-4xl font-bold mb-14">{title}</h1>
+  {posts.map(p => <Preview post={p} />)}
+</Layout>

@@ -1,12 +1,12 @@
 ---
-layout: ../../layouts/BlogPost.astro
+layout: ../../layouts/Post.astro
 author: thomas.md
 title: Video Post
 date: 2021-10-28T21:38:42.945Z
 banner:
   - https://www.youtube.com/embed/sNmOrHw-77U
 description: Testing a video post.
-category: Travel
+category: adventure
 ---
 **It’s no secret** that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the industry is fast becoming overcrowded, heaving with agencies offering similar services — on the surface, at least.
 

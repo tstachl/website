@@ -6,42 +6,6 @@ publish_mode: editorial_workflow
 media_folder: "public/assets"
 public_folder: "/assets"
 collections:
-  - name: "authors"
-    label: "Authors"
-    folder: "src/pages/authors"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - label: "Layout"
-        name: "layout"
-        widget: "hidden"
-        default: "../../layouts/Author.astro"
-      - label: "Title"
-        name: "title"
-        widget: "string"
-      - label: "Photo"
-        name: "photo"
-        widget: image
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
-  - name: "categories"
-    label: "Categories"
-    folder: "src/pages/categories"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - label: "Layout"
-        name: "layout"
-        widget: "hidden"
-        default: "../../layouts/Category.astro"
-      - label: "Title"
-        name: "title"
-        widget: "string"
   - name: "posts"
     label: "Posts"
     folder: "src/pages/posts"
@@ -53,14 +17,7 @@ collections:
       - label: "Layout"
         name: "layout"
         widget: "hidden"
-        default: "../../layouts/BlogPost.astro"
-      - label: "Author"
-        name: "author"
-        widget: "relation"
-        collection: "authors"
-        search_fields: ["title"]
-        value_field: "{{slug}}.md"
-        display_fields: ["title"]
+        default: "../../layouts/Post.astro"
       - label: "Title"
         name: "title"
         widget: "string"
@@ -85,6 +42,10 @@ collections:
         search_fields: ["title"]
         value_field: "{{title}}"
         display_fields: ["title"]
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["adventure", "relationship", "technology", "wisdom"]
       - label: "Body"
         name: "body"
         widget: "markdown"
