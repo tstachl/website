@@ -8,7 +8,9 @@ export interface Props {
   permalink: string;
 }
 
-const { title, description, permalink } = Astro.props;
+let { title, description, permalink } = Astro.props;
+
+if (!title.includes('Stachl')) title += ' - Thomas Stachl';
 
 ---
 <html lang="en">

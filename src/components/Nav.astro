@@ -7,12 +7,10 @@ let categories = (await fg('src/pages/categories/*.md')).map((el) => {
   return { url: '/' + el.join('/'), title: el[el.length-1].charAt(0).toUpperCase() + el[el.length-1].slice(1) };
 });
 ---
-<nav>
-  <ul class="flex float-right">
+  <ul class="flex float-right text-sm uppercase font-bold tracking-wide leading-8">
     {categories.map((category) => (
-      <li class="mr-6">
+      <li class="ml-2">
         <a class="hover:text-primary" href={category.url}>{category.title}</a>
       </li>
     ))}
   </ul>
-</nav>
