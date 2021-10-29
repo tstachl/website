@@ -37,13 +37,6 @@ collections:
           widget: image
       - label: "Category"
         name: "category"
-        widget: "relation"
-        collection: "categories"
-        search_fields: ["title"]
-        value_field: "{{title}}"
-        display_fields: ["title"]
-      - label: "Category"
-        name: "category"
         widget: "select"
         options: ["adventure", "relationship", "technology", "wisdom"]
       - label: "Body"
