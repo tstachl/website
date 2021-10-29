@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Meta from '../components/Meta.astro';
+import PostMeta from '../components/PostMeta.astro';
 import Banner from '../components/Banner.astro';
 
 // page
@@ -11,7 +11,7 @@ let canonicalURL = Astro.request.canonicalURL.toString();
 <Layout title={title} description={description} permalink={canonicalURL}>
   <article class="mx-8 mb-24">
     <h1 class="text-4xl font-bold mb-4">{title}</h1>
-    <Meta category={category} publishDate={date} />
+    <PostMeta category={category} publishDate={date} />
     <div class="-mx-8">
       <Banner srcs={banner} />
     </div>
