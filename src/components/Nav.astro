@@ -2,7 +2,7 @@
 // collection
 import categories from "../data/categories.json"
 ---
-<ul class="flex float-right text-sm uppercase font-bold tracking-wide leading-8">
+<ul class="float-right text-sm uppercase font-bold tracking-wide leading-8 hidden md:flex">
   {Object.keys(categories).map((category) => (
     <li class="ml-2">
       <a class="hover:text-primary" href={categories[category].url}>{categories[category].name}</a>
