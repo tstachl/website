@@ -1,0 +1,18 @@
+---
+import fg from "fast-glob"
+
+// TODO: Get rid of this hacky thing
+let categories = (await fg('src/pages/categories/*.md')).map((el) => {
+  el = el.slice(10, -3).split('/');
+  return { url: '/' + el.join('/'), title: el[el.length-1].charAt(0).toUpperCase() + el[el.length-1].slice(1) };
+});
+---
+<nav>
+  <ul class="flex float-right">
+    {categories.map((category) => (
+      <li class="mr-6">
+        <a class="hover:text-primary" href={category.url}>{category.title}</a>
+      </li>
+    ))}
+  </ul>
+</nav>
