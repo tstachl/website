@@ -10,7 +10,7 @@ import categoryData from "../data/categories.json"
 let category = categoryData[Astro.props.category];
 let publishDate = Astro.props.publishDate;
 ---
-<div class="mb-6 text-sm text-primary">
+<div class="mb-2 text-sm text-primary lg:mb-4">
   <span class="uppercase">
     <a href={category.url} rel="category">{category.name}</a>
   </span>

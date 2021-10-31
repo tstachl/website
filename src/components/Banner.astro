@@ -8,7 +8,7 @@ export interface Props {
 
 const { srcs } = Astro.props;
 ---
-<div class="w-full h-96 flex flex-row gap-4 mb-8">
+<div class="w-full h-96 flex flex-row gap-4 mb-2">
   {srcs.map((el) => {
     if (el.endsWith('.jpg') || el.endsWith('.png')) {
       return <BannerImage src={el} />
