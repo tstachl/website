@@ -1,22 +1,7 @@
 {
-  "adventure": {
-    "url": "/categories/adventure",
-    "name": "Adventure",
-    "description": ""
-  },
-  "relationship": {
-    "url": "/categories/relationship",
-    "name": "Relationship",
-    "description": ""
-  },
-  "technology": {
-    "url": "/categories/technology",
-    "name": "Technology",
-    "description": ""
-  },
-  "wisdom": {
-    "url": "/categories/wisdom",
-    "name": "Wisdom",
+  "freedom": {
+    "url": "/categories/freedom",
+    "name": "Freedom",
     "description": ""
   }
 }

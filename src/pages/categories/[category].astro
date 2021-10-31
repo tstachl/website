@@ -21,20 +21,20 @@ export function getStaticPaths() {
 const { allPosts } = Astro.props;
 const { params } = Astro.request;
 
-// page
-let title = categoryData[params.category].name;
-let description = categoryData[params.category].description;
-let canonicalURL = Astro.request.canonicalURL.toString();
+const title = categoryData[params.category].name;
+const description = categoryData[params.category].description;
+const permalink = Astro.request.canonicalURL.toString();
 
-/** filter posts by category, sort by date */
 const posts = allPosts
   .filter((post) => post.category === params.category)
   .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
+const categories = allPosts.map((post) => post.category);
 ---
 <Layout 
   title={title}
   description={description}
-  permalink={canonicalURL}>
+  permalink={permalink}
+  categories={categories}>
   <h1 class="text-center text-4xl font-bold mb-14">{title}</h1>
   {posts.map(p => <Preview post={p} />)}
 </Layout>

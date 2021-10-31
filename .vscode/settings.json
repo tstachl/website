@@ -1,6 +1,3 @@
 {
-  "spellright.language": [],
-  "spellright.documentTypes": [
-    "latex"
-  ]
+  "insertDateString.format": "YYYY-MM-DDThh:mm:ssZZZ"
 }

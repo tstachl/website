@@ -6,9 +6,10 @@ import Banner from '../components/Banner.astro';
 // page
 const { content } = Astro.props;
 const { title, description, date, banner, category } = content;
-let canonicalURL = Astro.request.canonicalURL.toString();
+const permalink = Astro.request.canonicalURL.toString();
+const categories = [];
 ---
-<Layout title={title} description={description} permalink={canonicalURL}>
+<Layout title={title} description={description} permalink={permalink} categories={categories}>
   <article class="mx-8 mb-24">
     <div class="-mx-8">
       <Banner srcs={banner} />

@@ -6,9 +6,10 @@ export interface Props {
   title: string;
   description: string;
   permalink: string;
+  categories: Array;
 }
 
-let { title, description, permalink } = Astro.props;
+let { title, description, permalink, categories } = Astro.props;
 
 if (!title.endsWith('Thomas Stachl')) title += ' - Thomas Stachl';
 
@@ -51,7 +52,7 @@ if (!title.endsWith('Thomas Stachl')) title += ' - Thomas Stachl';
   <body class="min-h-screen md:text-lg lg:text-xl
     bg-gray-100 text-gray-800 
     dark:bg-gray-900 dark:text-gray-300">
-    <Header />
+    <Header categories={categories} />
     <main class="md:mx-auto max-w-screen-lg pt-14 px-4">
       <slot />
     </main>

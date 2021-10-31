@@ -1,5 +1,11 @@
 ---
 import Nav from './Nav.astro';
+
+export interface Props {
+  categories: Array;
+}
+
+const { categories } = Astro.props;
 ---
 
 <header class="w-full m-0 p-0 bg-cover bg-bottom">
@@ -18,7 +24,7 @@ import Nav from './Nav.astro';
         <a href="/">Thomas<span class="text-primary">.</span>Stachl</a>
       </div>
       <div class="flex-auto">
-        <Nav />
+        <Nav categories={categories} />
       </div>
     </div>
   </div>

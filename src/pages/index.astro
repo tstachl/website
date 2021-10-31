@@ -1,27 +1,25 @@
 ---
-// Component Imports
 import Layout from '../layouts/Layout.astro';
 import Preview from '../components/Preview.astro';
 
 interface MarkdownFrontmatter {
   date: string;
+  category: string;
 }
 
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-let title = 'Thomas Stachl';
-let description = 'A personal blog and creative outlet after leaving social media.';
-let permalink = 'https://stachl.me/';
+const title = 'Thomas Stachl';
+const description = 'A personal blog and creative outlet after leaving social media.';
+const permalink = 'https://stachl.me/';
 
 // Data Fetching: List all Markdown posts in the repo.
 
 let allPosts = Astro.fetchContent<MarkdownFrontmatter>('./posts/*.md');
+let categories = allPosts.map((post) => post.category);
+
 allPosts = allPosts.sort((a, b) => {
   return new Date(b.date).valueOf() - new Date(a.date).valueOf()
 });
 ---
-<Layout title={title} description={description} permalink={permalink}>
+<Layout title={title} description={description} permalink={permalink} categories={categories}>
   {allPosts.map(p => <Preview post={p} />)}
 </Layout>

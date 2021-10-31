@@ -1,11 +1,17 @@
 ---
-// collection
-import categories from "../data/categories.json"
+import categoryData from "../data/categories.json"
+
+export interface Props {
+  categories: Array;
+}
+
+const { categories } = Astro.props;
+console.log(categories);
 ---
 <ul class="float-right text-sm uppercase font-bold tracking-wide leading-8 hidden md:flex">
-  {Object.keys(categories).map((category) => (
+  {categories.map((category) => (
     <li class="ml-2">
-      <a class="hover:text-primary" href={categories[category].url}>{categories[category].name}</a>
+      <a class="hover:text-primary" href={categoryData[category].url}>{categoryData[category].name}</a>
     </li>
   ))}
 </ul>
