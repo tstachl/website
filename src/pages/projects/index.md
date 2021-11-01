@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/Post.astro
+layout: ../../layouts/Post.astro
 title: My Projects
 date: 2021-11-01T10:50:11-07:00
 banner:
@@ -8,7 +8,7 @@ description: A running list of all the projects I'm working on ...
 category: freedom
 ---
 
-<!-- - [x] Leave Social Media
+- [x] Leave Social Media
 - [ ] Create a Website
 - [ ] Atala Prism Pioneer Program
 - [ ] Retire at 36
@@ -22,6 +22,8 @@ category: freedom
 - [ ] Kayak the West Coast
 - [ ] Alpen Extreme
 - [ ] Hike Kilimanjaro
-- [ ] Video Podcast with Nita -->
+- [ ] Video Podcast with Nita
+- [ ] Ayahuascero (prepare and run ceremony) training
+- [ ] Curandero (healer) training
 
 Testing Stuff

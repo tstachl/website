@@ -14,15 +14,18 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
     remarkPlugins: [
       // Add a Remark plugin that you want to enable for your project.
       // If you need to provide options for the plugin, you can use an array and put the options as the second item.
-      // ['remark-autolink-headings', { behavior: 'prepend'}],
+      ['remark-gfm'],
     ],
     rehypePlugins: [
       // Add a Rehype plugin that you want to enable for your project.
       // If you need to provide options for the plugin, you can use an array and put the options as the second item.
       // 'rehype-slug',
       // ['rehype-autolink-headings', { behavior: 'prepend'}],
-      [import('./packages/rehype-video-embed/index.js'), {
-        className: "rounded-md object-cover h-full w-full"
+      [import('./plugins/rehype-video-embed/index.js'), {
+        containerClass: 'aspect-w-16 aspect-h-9',
+        iframeClass: 'rounded-md object-cover h-full w-full',
+        allow: 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture',
+        allowfullscreen: true
       }],
     ],
   },

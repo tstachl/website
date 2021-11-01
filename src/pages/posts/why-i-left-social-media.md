@@ -45,5 +45,3 @@ Taking action and doing what I stand for was the final step. Watching the docume
 
 https://youtu.be/uaaC57tcci0
 
-
-
