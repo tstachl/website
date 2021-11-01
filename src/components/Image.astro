@@ -1,0 +1,18 @@
+---
+export interface Props {
+  src: string;
+  alt: string;
+  className: string;
+}
+
+const { src, alt, className } = Astro.props;
+let domain = 'https://stachl.gumlet.io';
+if (Astro.request.url.hostname === 'localhost') {
+  domain = '';
+}
+---
+<img class={className}
+     src={`${domain}${src}?w=320`}
+     srcset={`${domain}${src}?w=1024 1024w, ${domain}${src}?w=640 640w, ${domain}${src}?w=320 320w`}
+     sizes="100vw"
+     alt={alt} />

@@ -9,7 +9,7 @@ interface MarkdownFrontmatter {
 
 const title = 'Thomas Stachl';
 const description = 'A personal blog and creative outlet after leaving social media.';
-const permalink = 'https://stachl.me/';
+const permalink = Astro.request.canonicalURL.toString();
 
 // Data Fetching: List all Markdown posts in the repo.
 
