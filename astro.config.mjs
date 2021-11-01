@@ -34,6 +34,6 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
     trailingSlash: 'ignore',
   },
   buildOptions: {
-    site: 'https://stachl.me'
+    site: 'https://stachl.pages.dev'
   }
 });
