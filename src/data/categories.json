@@ -3,5 +3,10 @@
     "url": "/categories/freedom",
     "name": "Freedom",
     "description": ""
+  },
+  "growth": {
+    "url": "/categories/growth",
+    "name": "Growth",
+    "description": ""
   }
 }

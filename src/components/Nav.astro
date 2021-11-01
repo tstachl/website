@@ -8,7 +8,7 @@ export interface Props {
 const { categories } = Astro.props;
 ---
 <ul class="float-right text-sm uppercase font-bold tracking-wide leading-8 hidden md:flex">
-  {categories.map((category) => (
+  {[...new Set(categories)].map((category) => (
     <li class="ml-2">
       <a class="hover:text-primary" href={categoryData[category].url}>{categoryData[category].name}</a>
     </li>

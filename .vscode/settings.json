@@ -1,3 +1,14 @@
 {
-  "insertDateString.format": "YYYY-MM-DDThh:mm:ssZZZ"
+  "insertDateString.format": "YYYY-MM-DDThh:mm:ssZZZ",
+  "grammarly.domain": "casual",
+  "grammarly.showExamples": true,
+  "grammarly.autoActivate": true,
+  "grammarly.showUsernameInStatusBar": true,
+  "editor.wordWrap": "wordWrapColumn",
+  "[markdown]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80,
+    "editor.quickSuggestions": false
+  },
+  "editor.wordWrapColumn": 80
 }
