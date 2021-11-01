@@ -35,13 +35,26 @@ Endless scrolling through updates of what my friends are doing is not my favorit
 
 I always felt like I had to post about all the good things happening in my life. I have those moments as well, ya know. 
 
-One thing that helped me a lot with taming my monkey brain was learning about thought management. Thoughts create feelings; feelings drive actions. The more I felt like I was missing out, the more I scrolled to see what I missed.
+One thing that helped me a lot with taming my monkey brain was learning about thought management. Thoughts create feelings; feelings drive actions. The more I felt I was missing out, the more I scrolled to see what I missed.
 
 After hiking parts of the Pacific Crest Trail and posting many pictures, I decided to earn a Life Coach certification. Learning how to manage my mind was the first step of leaving the fangs of social media.
 
 ## Talking is Easy
 
-Taking action and doing what I stand for was the final step. Watching the documentary "Social Dilemma", I realized this is the opposite of what I stand for. 
+"Words are cheap," and up until now, that's the only thing I did. Arguing for a better world. Envisioning a time when we get uplifted by technology rather than burnt out and feeling miserable.
+
+In 2020, I actually started working on an AI project called Pilina. The idea was to randomly remind the user to think positive, powerful thoughts. As well as learn from the user and ultimately create a community where people can help lift each other up. This idea was further reinforced by watching the "Social Dilemma" on Netflix.
 
 https://youtu.be/uaaC57tcci0
 
+Life was constantly changing, and my priorities did as well. By year-end, I did one last push on Pilina before putting the project on pause to work on financial freedom.
+
+I knew I couldn't stay on social media and cast a vote of approval by using those platforms. That led me to stop posting, checking, and I also deleted all the apps from my phone.
+
+It's been 10 months, and I don't miss it a bit. So in late October, I went ahead and deleted all my profiles from Instagram, Facebook, LinkedIn, Quora, and many more.
+
+The only app I'll keep using for a few more months is WhatsApp. I have to teach my mom how to use Signal before I can get rid of that.
+
+Cleaning up my digital life is a journey, and I'm learning more every day. Here is an excellent guide in case you're thinking of doing the same.
+
+https://www.youtube.com/watch?v=Z4p8Tkx1N5g
