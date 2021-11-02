@@ -1,11 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import PostMeta from '../components/PostMeta.astro';
-import Banner from '../components/Banner.astro';
+import Layout from "../layouts/Layout.astro"
+import PostMeta from "../components/PostMeta.astro"
+import Banner from "../components/Banner.astro"
+import Divider from "../components/Divider.astro"
+import CommentForm from "../components/CommentForm.astro"
+import Comments from "../components/Comments.astro"
 
 // page
 const { content } = Astro.props;
-const { title, description, date, banner, category } = content;
+const { title, description, date, banner, category, comments } = content;
 const permalink = Astro.request.canonicalURL.toString();
 const categories = [];
 ---
@@ -15,9 +18,15 @@ const categories = [];
       <Banner srcs={banner} />
     </div>
     <PostMeta category={category} publishDate={date} />
-    <section class="prose dark:prose-dark prose-lg lg:prose-xl xl:prose-2xl mt-8 lg:mt-14">
+    <section class="prose dark:prose-dark prose-lg lg:prose-xl xl:prose-2xl mt-8 lg:mt-14 mb-8 mx-auto">
       <h1>{title}</h1>
       <slot />
+      <Divider />
     </section>
+    <aside class="prose dark:prose-dark prose-lg lg:prose-xl xl:prose-2xl mx-auto">
+      <CommentForm />
+      <Divider />
+      <Comments comments={comments} />
+    </aside>
   </article>
 </Layout>

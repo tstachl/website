@@ -1,0 +1,82 @@
+<h4>Add a Comment</h4>
+<form class="flex w-full gap-6">
+  <div class="flex-grow grid grid-cols-1 gap-6">
+    <label class="block">
+      <span>Name</span>
+      <input type="text" name="name" class="
+          mt-1
+          block
+          w-full
+          rounded-md
+          bg-gray-200 dark:bg-gray-800
+          border-transparent
+          focus:border-gray-500 
+          focus:bg-white dark:focus:bg-gray-900
+          focus:ring-0
+        " placeholder="">
+    </label>
+    <label class="block">
+      <span>Comment</span>
+      <textarea name="comment" class="
+          mt-1
+          block
+          w-full
+          rounded-md
+          bg-gray-200 dark:bg-gray-800
+          border-transparent
+          focus:border-gray-500 
+          focus:bg-white dark:focus:bg-gray-900
+          focus:ring-0
+        " rows="3"></textarea>
+    </label>
+    <button type="submit" class="
+        w-full
+        h-12
+        px-6
+        font-bold
+        text-gray-100
+        transition-colors
+        duration-150 
+        bg-gray-700 
+        rounded-lg 
+        focus:shadow-outline 
+        hover:bg-gray-800
+      ">Submit Comment</button>
+  </div>
+  <div class="flex-shrink">
+    <label class="block">
+      <span>Avatar</span>
+      <input type="hidden" name="avatar" value="" />
+      <img id="avatar" class="my-3 h-24 w-24 lg:h-32 lg:w-32 xl:h-40 xl:w-40 rounded-full ring-2 ring-gray-900 dark:ring-gray-100 dark:bg-gray-800 bg-gray-200" src="https://avatars.dicebear.com/api/adventurer/default.svg" />
+    </label>
+  </div>
+</form>
+
+<script>
+  async function digestMessage(message) {
+    const data = new TextEncoder().encode(message);
+    const hash = await crypto.subtle.digest('SHA-1', data);
+    const hashArray = Array.from(new Uint8Array(hash));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  }
+
+  function debounce(callback, wait) {
+    let timeout = null;
+    return (...args) => {
+      window.clearTimeout(timeout);
+      timeout = window.setTimeout(() => {
+        callback.apply(null, args);
+      }, wait);
+    };
+  }
+
+  document
+    .querySelector("textarea[name=comment]")
+    .addEventListener("keyup", debounce((e) => {
+      digestMessage(e.target.value).then((hx) => {
+        const src = `https://avatars.dicebear.com/api/adventurer/${hx}.svg`;
+        document.querySelector('#avatar').setAttribute('src', src);
+        document.querySelector('input[name=avatar]').value = src;
+      });
+    }, 1000));
+</script>

@@ -1,0 +1,29 @@
+---
+interface Comment {
+  name: string;
+  avatar: string;
+  comment: string;
+}
+
+export interface Props {
+  comments: Array<Comment>;
+}
+console.log(Astro.props.comments);
+const comments = Astro.props.comments || [];
+console.log(comments);
+---
+<h4>Comments ({ comments.length })</h4>
+<section>
+      <!--my-3 h-24 w-24 lg:h-32 lg:w-32 xl:h-40 xl:w-40 rounded-full ring-2 ring-gray-900 dark:ring-gray-100 dark:bg-gray-800 bg-gray-200-->
+  {comments.map(comment => (
+    <article class="grid grid-cols-6 gap-4">
+      <div class="col-span-1 text-center">
+        <img class="inline md:w-2/3 lg:w-1/2 rounded-full ring-2 ring-gray-900 dark:ring-gray-100 dark:bg-gray-800 bg-gray-200" src={comment.avatar} alt="Auto Generated Avatar" style="margin:0" />
+      </div>
+      <div class="col-span-5">
+        <h5 class="font-bold">{comment.name}</h5>
+        <p class="first:mt-0">{comment.comment}</p>
+      </div>
+    </article>
+  ))}
+</section>
