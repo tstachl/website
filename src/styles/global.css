@@ -6,8 +6,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-:focus-visible {
-  outline-color: var(--color-primary);
-}
