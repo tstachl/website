@@ -10,5 +10,25 @@
     "editor.wordWrapColumn": 80,
     "editor.quickSuggestions": false
   },
-  "editor.wordWrapColumn": 80
+  "editor.wordWrapColumn": 80,
+  "grammarly.overrides": [
+    {
+      "files": [
+        "**/src/pages/posts/token-valuation.md"
+      ],
+      "config": {
+        "audience": "knowledgeable",
+        "dialect": "american",
+        "domain": "casual",
+        "emotions": [
+          "confident",
+          "optimistic",
+          "analytical"
+        ],
+        "goals": [
+          "inform"
+        ]
+      }
+    }
+  ]
 }
