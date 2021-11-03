@@ -4,7 +4,9 @@
 // @type-check enabled!
 // VSCode and other TypeScript-enabled text editors will provide auto-completion,
 // helpful tooltips, and warnings if your exported object is invalid.
-// You can disable this by removing "@ts-check" and `@type` comments below.
+// You can disable this by removing '@ts-check' and `@type` comments below.
+
+const { CF_PAGES_BRANCH } = process.env;
 
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
@@ -34,6 +36,6 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
     trailingSlash: 'ignore',
   },
   buildOptions: {
-    site: 'https://stachl.pages.dev'
+    site: CF_PAGES_BRANCH === 'master' ? 'https://stachl.pages.dev' : '',
   }
 });

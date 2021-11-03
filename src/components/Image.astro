@@ -6,9 +6,9 @@ export interface Props {
 }
 
 const { src, alt, className } = Astro.props;
-let domain = 'https://stachl.gumlet.io';
-if (Astro.request.url.hostname === 'localhost') {
-  domain = '';
+let domain = '';
+if (Astro.request.url.hostname === 'stachl.pages.dev') {
+  domain = 'https://stachl.gumlet.io';
 }
 ---
 <img class={className}
