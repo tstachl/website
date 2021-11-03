@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#ff374a',
-        secondary: '#5865f2',
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
       },
       typography(theme) {
         return {
@@ -56,5 +56,6 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/forms'),
   ],
 }

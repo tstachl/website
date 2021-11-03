@@ -11,6 +11,7 @@
   "devDependencies": {
     "@astrojs/renderer-preact": "^0.2.2",
     "@tailwindcss/aspect-ratio": "^0.3.0",
+    "@tailwindcss/forms": "^0.3.4",
     "@tailwindcss/typography": "^0.4.1",
     "astro": "^0.20.12",
     "get-video-id": "^3.4.1",
