@@ -9,8 +9,7 @@
   </div>
 </label>
 
-<script hoist>
-document.addEventListener("DOMContentLoaded", () => {
+<script>
   document.querySelector(".theme-toggle input")
           .addEventListener("change", (e) => {
             if (e.target.checked) {
@@ -21,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
               localStorage.theme = 'light';
             }
           });
+
   if (
     localStorage.theme === 'dark' || (
       !('theme' in localStorage) 
@@ -28,5 +28,4 @@ document.addEventListener("DOMContentLoaded", () => {
     )) {
       document.querySelector(".theme-toggle input").click();
     }
-});
 </script>
