@@ -43,6 +43,17 @@ if (!title.endsWith('Thomas Stachl')) title += ' - Thomas Stachl';
 
     <!-- Styles -->
     <link rel="stylesheet" href={Astro.resolve('../styles/global.css')} >
+
+    <!-- Theme Toggle -->
+    <script>
+      // in the header and executed before the page is loaded
+      if (localStorage.theme === 'dark' || (
+          !('theme' in localStorage) 
+          && window.matchMedia('(prefers-color-scheme: dark)').matches
+        )) {
+          document.documentElement.classList.add('dark');
+        }
+    </script>
   </head>
 
   <body class="min-h-screen md:text-lg lg:text-xl
