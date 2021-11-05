@@ -6,3 +6,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.image-pull {
+  @apply -mx-12;
+}
+
+.image-float {
+  @apply float-left;
+  @apply w-1/2;
+  @apply -ml-12;
+}
+
+.prose img {
+  @apply rounded-md;
+}

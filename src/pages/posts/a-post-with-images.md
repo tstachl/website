@@ -10,9 +10,28 @@ category: growth
 
 The metaverse is all the rage nowadays. From Axie Infinity to Facebook, both the crypto sphere and Silicon Valley are talking about it. And there is a good reason.
 
+:::image{.image-pull}
+  ![Alternative Text](/images/desk-with-do-more-on-computer-carl-heyerdahl-unsplash.jpg)
+:::
+
+Versions:
+
+1. Float Left
+2. Paragraph
+3. Pull Out
+4. Full Width
+
+:::image{.image-float}
+  ![Alternative Text](/images/desk-with-do-more-on-computer-carl-heyerdahl-unsplash.jpg)
+:::
+
 With COVID confining everyone into their four walls, everyone was looking to find an escape over the last year and a half. Some were fortunate enough to live in the countryside; others found escape in their screens.
 
 While I'm personally not really interested in having a digital version of me running around the [Sandbox](https://www.sandbox.game/en/), I can't deny the trend.
+
+:::image{.image-paragraph}
+  ![Alternative Text](/images/desk-with-do-more-on-computer-carl-heyerdahl-unsplash.jpg "Title")
+:::
 
 No surprise, my interest was peaked when I heard about [Metahero](https://metahero.io/) in late September. "The gateway into the metaverse" with "ultra-hd meta-scanning technology."
 
