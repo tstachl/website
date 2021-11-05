@@ -1,5 +1,6 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
   "insertDateString.format": "YYYY-MM-DDThh:mm:ssZZZ",
   "grammarly.domain": "casual",
   "grammarly.showExamples": true,

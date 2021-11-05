@@ -12,9 +12,19 @@
 }
 
 .image-float {
-  @apply float-left;
+  @apply float-left -ml-12;
+}
+
+.image-float.half {
   @apply w-1/2;
-  @apply -ml-12;
+}
+
+.image-float.quater {
+  @apply w-1/4;
+}
+
+.prose .image-float img {
+  @apply mt-0;
 }
 
 .prose img {
