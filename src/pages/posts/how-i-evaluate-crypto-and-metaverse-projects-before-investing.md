@@ -4,7 +4,7 @@ title: How I evaluate Crypto and Metaverse projects before investing
 date: 2021-11-02T17:34:15-07:00
 banner:
   - /images/desk-with-do-more-on-computer-carl-heyerdahl-unsplash.jpg
-description: "Fear of missing out? Is that how you make investement decisions? No worries, I'm right there with you. Here is my first attempt at a playbook to make fewer mistakes with my investement decisions."
+description: "Fear of missing out? Is that how you make investment decisions? No worries, I'm right there with you. Here is my first attempt at a playbook to make fewer mistakes with my investment decisions."
 category: growth
 ---
 
@@ -16,7 +16,7 @@ While I'm personally not really interested in having a digital version of me run
 
 No surprise, my interest was peaked when I heard about [Metahero](https://metahero.io/) in late September. "The gateway into the metaverse" with "ultra-hd meta-scanning technology."
 
-But before I ape into a project in fear of missing out, I have to do some due diligence. 
+But before I ape into a project in fear of missing out, I have to do some due diligence.
 
 ### Do I understand the project?
 
@@ -32,7 +32,7 @@ Yes, I understand the project, and I see a growing demand for the technology.
 
 ### Is the team competent?
 
-The next question is all about the team that's driving the project. The last thing I want is to invest in a venture that hides behind anonymity and get the rug pulled out under me. Not to say that sometimes anonymity is a benefit: Looking at you [Satoshi](https://en.wikipedia.org/wiki/Satoshi_Nakamoto). 
+The next question is all about the team that's driving the project. The last thing I want is to invest in a venture that hides behind anonymity and get the rug pulled out under me. Not to say that sometimes anonymity is a benefit: Looking at you [Satoshi](https://en.wikipedia.org/wiki/Satoshi_Nakamoto).
 
 Google is your friend for this one. In the case of Metahero, we have the following team:
 
@@ -76,7 +76,7 @@ It could go to zero. Any venture, any company, any investment could potentially 
 
 With that out of the way, the only other risks I can see are poor management/marketing/partnerships, delays in technology releases, and losing the competitive advantage. None of them raise red flags.
 
-One more thing goes for all projects: people tend to buy the rumors and sell the news. I've experienced that with Metahero and the unveiling in Dubai. The price rose from $0.10 to $0.14, leading up to the conference.  Followed by a sharp drop to $0.09. 
+One more thing goes for all projects: people tend to buy the rumors and sell the news. I've experienced that with Metahero and the unveiling in Dubai. The price rose from $0.10 to $0.14, leading up to the conference. Followed by a sharp drop to $0.09.
 
 Always buy before the rumor comes out or after the news event happens.
 
