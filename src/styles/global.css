@@ -32,7 +32,25 @@
 }
 
 .youtube-link {
-  @apply block relative after:absolute after:top-1/2 after:left-1/2 after:w-40 after:h-40 after:-ml-20 after:-mt-20 after:bg-opacity-40 after:bg-gray-300 after:rounded-2xl;
+  @apply block relative after:absolute after:top-1/2 after:left-1/2 after:w-14 after:h-14 after:-ml-7 after:-mt-7 after:bg-opacity-60 after:bg-gray-100 after:rounded-2xl;
+}
+
+@media (min-width: 640px) {
+  .youtube-link {
+    @apply after:w-20 after:h-20 after:-ml-10 after:-mt-10;
+  }
+}
+
+@media (min-width: 1024px) {
+  .youtube-link {
+    @apply after:w-32 after:h-32 after:-ml-16 after:-mt-16;
+  }
+}
+
+@media (min-width: 1280px) {
+  .youtube-link {
+    @apply after:w-40 after:h-40 after:-ml-20 after:-mt-20;
+  }
 }
 
 .youtube-link:after {
