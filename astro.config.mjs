@@ -7,6 +7,7 @@
 // You can disable this by removing '@ts-check' and `@type` comments below.
 
 const { CF_PAGES_BRANCH } = process.env;
+const site = CF_PAGES_BRANCH === "master" ? "https://stachl.pages.dev" : "";
 
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
@@ -17,6 +18,7 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
       ["remark-directive"],
       [import("./plugins/remark/post-images.mjs")],
       ["remark-unwrap-images"],
+      [import("./plugins/remark/image-srcset.mjs"), { site: site }],
     ],
     rehypePlugins: [
       // Add a Rehype plugin that you want to enable for your project.
@@ -40,6 +42,6 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
     trailingSlash: "ignore",
   },
   buildOptions: {
-    site: CF_PAGES_BRANCH === "master" ? "https://stachl.pages.dev" : "",
+    site: site,
   },
 });
