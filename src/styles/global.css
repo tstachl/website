@@ -30,3 +30,11 @@
 .prose img {
   @apply rounded-md;
 }
+
+.youtube-link {
+  @apply block relative after:absolute after:top-1/2 after:left-1/2 after:w-40 after:h-40 after:-ml-20 after:-mt-20 after:bg-opacity-40 after:bg-gray-300 after:rounded-2xl;
+}
+
+.youtube-link:after {
+  content: url(/images/videos/play.svg);
+}

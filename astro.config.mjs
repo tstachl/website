@@ -15,7 +15,9 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
   renderers: ["@astrojs/renderer-preact"],
   markdownOptions: {
     remarkPlugins: [
+      ["remark-gfm"],
       ["remark-directive"],
+      [import("./plugins/remark/youtube-link.mjs")],
       [import("./plugins/remark/post-images.mjs")],
       ["remark-unwrap-images"],
       [import("./plugins/remark/image-srcset.mjs"), { site: site }],
@@ -25,16 +27,16 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
       // If you need to provide options for the plugin, you can use an array and put the options as the second item.
       // 'rehype-slug',
       // ['rehype-autolink-headings', { behavior: 'prepend'}],
-      [
-        import("./plugins/rehype-video-embed/index.js"),
-        {
-          containerClass: "aspect-w-16 aspect-h-9",
-          iframeClass: "rounded-md object-cover h-full w-full",
-          allow:
-            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
-          allowfullscreen: true,
-        },
-      ],
+      // [
+      //   import("./plugins/rehype-video-embed/index.js"),
+      //   {
+      //     containerClass: "aspect-w-16 aspect-h-9",
+      //     iframeClass: "rounded-md object-cover h-full w-full",
+      //     allow:
+      //       "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+      //     allowfullscreen: true,
+      //   },
+      // ],
     ],
   },
   devOptions: {
