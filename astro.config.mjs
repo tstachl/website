@@ -6,7 +6,7 @@
 // helpful tooltips, and warnings if your exported object is invalid.
 // You can disable this by removing '@ts-check' and `@type` comments below.
 
-const { CF_PAGES_BRANCH } = process.env;
+const { CF_PAGES_BRANCH, CF_PAGES_COMMIT_SHA } = process.env;
 const site =
   CF_PAGES_BRANCH === "master"
     ? "https://stachl.pages.dev"
