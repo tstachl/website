@@ -20,7 +20,7 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
       [import("./plugins/remark/youtube-link.mjs")],
       [import("./plugins/remark/post-images.mjs")],
       ["remark-unwrap-images"],
-      [import("./plugins/remark/image-srcset.mjs"), { site: site }],
+      [import("./plugins/remark/image-gumlet.mjs")],
     ],
     rehypePlugins: [
       // Add a Rehype plugin that you want to enable for your project.

@@ -45,7 +45,7 @@ if (!title.endsWith('Thomas Stachl')) title += ' - Thomas Stachl';
     <link rel="stylesheet" href={Astro.resolve('../styles/global.css')} >
 
     <!-- Theme Toggle -->
-    <script>
+    <script type="text/javascript">
       // in the header and executed before the page is loaded
       if (localStorage.theme === 'dark' || (
           !('theme' in localStorage) 
@@ -53,6 +53,17 @@ if (!title.endsWith('Thomas Stachl')) title += ' - Thomas Stachl';
         )) {
           document.documentElement.classList.add('dark');
         }
+    </script>
+    <!-- Gumlet -->
+    <script type="text/javascript">
+        window.GUMLET_CONFIG = {
+            hosts: [{
+                current: "stachl.pages.dev",
+                gumlet: "stachl.gumlet.io"
+            }],
+            lazy_load: true
+        };
+        (function(){d=document;s=d.createElement("script");s.src="https://cdn.gumlet.com/gumlet.js/2.1/gumlet.min.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
     </script>
   </head>
 
