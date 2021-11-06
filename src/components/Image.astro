@@ -7,4 +7,4 @@ export interface Props {
 
 const { src, alt, className } = Astro.props;
 ---
-<img class={className} data-src={`${src}`} alt={alt} />
+<img class={className} data-src={`${Astro.site.origin}${src}`} alt={alt} />

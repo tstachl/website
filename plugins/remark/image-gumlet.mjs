@@ -5,12 +5,10 @@ export default function images(options) {
     visit(tree, (node) => {
       if (node.type === "image") {
         const data = node.data || (node.data = {});
-        const url = new URL(node.url, "https://example.org");
-        url.searchParams.set("w", 320);
 
         data.hName = "img";
         data.hProperties = {
-          dataSrc: node.url,
+          dataSrc: options.site + node.url,
         };
       }
     });
