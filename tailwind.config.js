@@ -1,3 +1,10 @@
+const round = (num) =>
+  num
+    .toFixed(7)
+    .replace(/(\.[0-9]+?)0+$/, "$1")
+    .replace(/\.0$/, "");
+const em = (px, base) => `${round(px / base)}em`;
+
 module.exports = {
   mode: "jit",
   purge: ["./public/**/*.html", "./src/**/*.{astro,js,jsx,ts,tsx,vue,yml}"],
@@ -17,6 +24,37 @@ module.exports = {
             css: {
               blockquote: {
                 borderLeftColor: theme("colors.primary"),
+              },
+              ".image-float": {
+                marginRight: em(32, 16),
+              },
+            },
+          },
+          sm: {
+            css: {
+              ".image-float": {
+                marginRight: em(24, 14),
+              },
+            },
+          },
+          lg: {
+            css: {
+              ".image-float": {
+                marginRight: em(32, 18),
+              },
+            },
+          },
+          xl: {
+            css: {
+              ".image-float": {
+                marginRight: em(40, 20),
+              },
+            },
+          },
+          "2xl": {
+            css: {
+              ".image-float": {
+                marginRight: em(48, 24),
               },
             },
           },
@@ -57,11 +95,11 @@ module.exports = {
     extend: {
       typography: ["dark"],
       shaddow: ["group-hover"],
-    }
+    },
   },
   plugins: [
     require("@tailwindcss/typography"),
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/forms"),
   ],
-}
+};

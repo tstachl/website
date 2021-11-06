@@ -7,35 +7,33 @@
 // You can disable this by removing '@ts-check' and `@type` comments below.
 
 const { CF_PAGES_BRANCH } = process.env;
+const site = CF_PAGES_BRANCH === "master" ? "https://stachl.pages.dev" : "";
 
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
   // Enable the Preact renderer to support Preact JSX components.
-  renderers: ['@astrojs/renderer-preact'],
+  renderers: ["@astrojs/renderer-preact"],
   markdownOptions: {
     remarkPlugins: [
-      // Add a Remark plugin that you want to enable for your project.
-      // If you need to provide options for the plugin, you can use an array and put the options as the second item.
-      ['remark-gfm'],
+      ["remark-gfm"],
+      ["remark-directive"],
+      [import("./plugins/remark/youtube-link.mjs")],
+      [import("./plugins/remark/post-images.mjs")],
+      ["remark-unwrap-images"],
+      [import("./plugins/remark/image-srcset.mjs"), { site: site }],
     ],
     rehypePlugins: [
       // Add a Rehype plugin that you want to enable for your project.
       // If you need to provide options for the plugin, you can use an array and put the options as the second item.
       // 'rehype-slug',
       // ['rehype-autolink-headings', { behavior: 'prepend'}],
-      [import('./plugins/rehype-video-embed/index.js'), {
-        containerClass: 'aspect-w-16 aspect-h-9',
-        iframeClass: 'rounded-md object-cover h-full w-full',
-        allow: 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture',
-        allowfullscreen: true
-      }],
     ],
   },
   devOptions: {
-    tailwindConfig: './tailwind.config.js',
-    trailingSlash: 'ignore',
+    tailwindConfig: "./tailwind.config.js",
+    trailingSlash: "ignore",
   },
   buildOptions: {
-    site: CF_PAGES_BRANCH === 'master' ? 'https://stachl.pages.dev' : '',
-  }
+    site: site,
+  },
 });

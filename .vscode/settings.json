@@ -1,4 +1,6 @@
 {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
   "insertDateString.format": "YYYY-MM-DDThh:mm:ssZZZ",
   "grammarly.domain": "casual",
   "grammarly.showExamples": true,
@@ -13,22 +15,16 @@
   "editor.wordWrapColumn": 80,
   "grammarly.overrides": [
     {
-      "files": [
-        "**/src/pages/posts/token-valuation.md"
-      ],
+      "files": ["**/src/pages/posts/token-valuation.md"],
       "config": {
         "audience": "knowledgeable",
         "dialect": "american",
         "domain": "casual",
-        "emotions": [
-          "confident",
-          "optimistic",
-          "analytical"
-        ],
-        "goals": [
-          "inform"
-        ]
+        "emotions": ["confident", "optimistic", "analytical"],
+        "goals": ["inform"]
       }
     }
-  ]
+  ],
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "workbench.editor.enablePreviewFromQuickOpen": true
 }
