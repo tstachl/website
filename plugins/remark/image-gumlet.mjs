@@ -8,6 +8,7 @@ export default function images(options) {
 
         data.hName = "img";
         data.hProperties = {
+          src: null,
           dataSrc: options.site + node.url,
         };
       }

@@ -12,7 +12,7 @@ const { categories } = Astro.props;
 <header class="w-full m-0 p-0 bg-cover bg-bottom">
   <div class="md:container md:mx-auto pt-8 text-center">
     <a href="/">
-      <img class="inline-block h-24 w-24 rounded-full ring-2 ring-gray-900 dark:ring-gray-100" src="https://stachl.gumlet.io/thomas.png?w=96" alt="Thomas Stachl" width="96" height="96" />
+      <img class="inline-block h-24 w-24 rounded-full ring-2 ring-gray-900 dark:ring-gray-100" data-src={`${Astro.site.origin}/thomas.png`} alt="Thomas Stachl" width="96" height="96" />
     </a>
     <p class="mt-4 font-bold tracking-tight">Love the life you're living!</p>
     <Divider />
