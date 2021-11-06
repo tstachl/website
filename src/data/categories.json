@@ -8,5 +8,10 @@
     "url": "/categories/growth",
     "name": "Growth",
     "description": ""
+  },
+  "relationship": {
+    "url": "/categories/relationship",
+    "name": "Relationship",
+    "description": ""
   }
 }
