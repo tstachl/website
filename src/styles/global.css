@@ -64,3 +64,9 @@
 .video-js .vjs-poster {
   background-size: cover;
 }
+
+.video-js button.vjs-big-play-button {
+  @apply top-1/2 left-1/2;
+  margin-left: -1.5em;
+  margin-top: -0.81666em;
+}
