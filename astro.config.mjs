@@ -10,8 +10,8 @@ const { CF_PAGES_BRANCH } = process.env;
 const site =
   CF_PAGES_BRANCH === "master"
     ? "https://stachl.pages.dev"
-    : CF_PAGES_BRANCH !== ""
-    ? `${CF_PAGES_BRANCH}.stachl.pages.dev`
+    : CF_PAGES_COMMIT_SHA !== ""
+    ? `${CF_PAGES_COMMIT_SHA}.stachl.pages.dev`
     : "";
 
 // @ts-check
