@@ -17,4 +17,4 @@ yarn-error.log*
 # macOS-specific files
 .DS_Store
 
-public/images/videos/youtube/*.jpg
+public/images/videos/**/*.jpg
