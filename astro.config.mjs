@@ -7,7 +7,12 @@
 // You can disable this by removing '@ts-check' and `@type` comments below.
 
 const { CF_PAGES_BRANCH } = process.env;
-const site = CF_PAGES_BRANCH === "master" ? "https://stachl.pages.dev" : "";
+const site =
+  CF_PAGES_BRANCH === "master"
+    ? "https://stachl.pages.dev"
+    : CF_PAGES_BRANCH !== ""
+    ? `${CF_PAGES_BRANCH}.stachl.pages.dev`
+    : "";
 
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({

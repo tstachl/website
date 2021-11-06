@@ -67,9 +67,8 @@ if (!title.endsWith('Thomas Stachl')) title += ' - Thomas Stachl';
     </script>
 
     <!-- Video.js -->
-    <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet">
+    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet">
     <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet">
-
   </head>
 
   <body class="min-h-screen md:text-lg lg:text-xl
@@ -80,6 +79,7 @@ if (!title.endsWith('Thomas Stachl')) title += ' - Thomas Stachl';
       <slot />
     </main>
     <Footer />
+    <script>window.HELP_IMPROVE_VIDEOJS = false;</script>
     <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
   </body>
 </html>
