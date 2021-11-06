@@ -11,7 +11,7 @@ const site =
   CF_PAGES_BRANCH === "master"
     ? "https://stachl.pages.dev"
     : CF_PAGES_BRANCH !== ""
-    ? `${CF_PAGES_BRANCH}.stachl.pages.dev`
+    ? `https://${CF_PAGES_BRANCH}.stachl.pages.dev`
     : "";
 
 // @ts-check
