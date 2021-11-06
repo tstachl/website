@@ -14,7 +14,7 @@ const { srcs } = Astro.props;
       return <BannerImage src={el} />
     }
 
-    if (el.includes('youtube.com') || el.includes('youtu.be')) {
+    if (el.startsWith('https://video.gumlet')) {
       return <BannerVideo src={el} />
     }
   })}

@@ -56,3 +56,11 @@
 .youtube-link:after {
   content: url(/images/videos/play.svg);
 }
+
+.video-js:not(.vjs-fullscreen) .vjs-tech {
+  @apply object-cover;
+}
+
+.video-js .vjs-poster {
+  background-size: cover;
+}

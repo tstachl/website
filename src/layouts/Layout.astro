@@ -65,6 +65,11 @@ if (!title.endsWith('Thomas Stachl')) title += ' - Thomas Stachl';
         };
         (function(){d=document;s=d.createElement("script");s.src="https://cdn.gumlet.com/gumlet.js/2.1/gumlet.min.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
     </script>
+
+    <!-- Video.js -->
+    <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet">
+
   </head>
 
   <body class="min-h-screen md:text-lg lg:text-xl
@@ -75,5 +80,6 @@ if (!title.endsWith('Thomas Stachl')) title += ' - Thomas Stachl';
       <slot />
     </main>
     <Footer />
+    <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
   </body>
 </html>

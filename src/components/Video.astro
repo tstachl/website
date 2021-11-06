@@ -1,17 +1,16 @@
 ---
-import getVideoId from 'get-video-id';
-
 export interface Props {
   src: string;
   className: string;
 }
 
-let video = getVideoId(Astro.props.src);
-let src = video.service === 'youtube' ? `//www.youtube.com/embed/${video.id}` :
-          video.service === 'vimeo' ? `//player.vimeo.com/video/${video.id}` :
-          video.service === 'vine' ? `//vine.co/v/*/embed/simple` :
-          video.service === 'videopress' ? `//videopress.com/embed/${video.id}` :
-          video.service === 'microsoftstream' ? `//web.microsoftstream.com/embed/video/${video.id}` :
-          video.service === 'dailymotion' ? `https://www.dailymotion.com/embed/video/${video.id}` : '';
+const { src, className } = Astro.props;
 ---
-<iframe src={src} class={Astro.props.className} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<video
+  class={`${className} video-js vjs-theme-city`}
+  poster={`${src}/thumbnail-1-0.png`}
+  preload="auto"
+  controls
+  data-setup={'{}'}>
+  <source src={`${src}/1.m3u8`} type="application/x-mpegURL">
+</video>
