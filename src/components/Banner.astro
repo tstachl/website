@@ -10,12 +10,10 @@ const { srcs } = Astro.props;
 ---
 <div class="w-full h-96 flex flex-row gap-4 mb-4">
   {srcs.map((el) => {
-    if (el.endsWith('.jpg') || el.endsWith('.jpeg') || el.endsWith('.png')) {
-      return <BannerImage src={el} />
-    }
-
     if (el.startsWith('https://video.gumlet')) {
       return <BannerVideo src={el} />
     }
+
+    return <BannerImage src={el} />
   })}
 </div>

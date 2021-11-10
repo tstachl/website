@@ -8,9 +8,7 @@ description: "Today marks the day my big sister official became a published auth
 category: relationship
 ---
 
-:::image{.image-float.half}
-![Christin and her dog Neyla acting on stage](/images/christin-and-her-dog-neyla.jpg "Christin and her dog Neyla acting on stage")
-:::
+<Image title="Christin and her dog Neyla acting on stage" alt="Christin and her dog Neyla acting on stage" src="/images/christin-and-her-dog-neyla.jpg" mode="float" size="lg" />
 
 It's been a wild ride growing up with a big sister. For the first few years of my life, I couldn't do anything wrong. I always was the good boy, and she was the bad girl. But then she decided to become a good girl. No matter what it takes.
 

@@ -15,12 +15,16 @@
   @apply float-left -ml-12;
 }
 
-.image-float.half {
+.image-float.lg {
   @apply w-1/2;
 }
 
-.image-float.quater {
+.image-float.md {
   @apply w-1/4;
+}
+
+.image-float.sm {
+  @apply w-1/6;
 }
 
 .prose .image-float img {
@@ -55,6 +59,14 @@
 
 .youtube-link:after {
   content: url(/images/videos/play.svg);
+}
+
+.prose .video-js {
+  position: absolute !important;
+}
+
+.prose .video-js video {
+  @apply m-0;
 }
 
 .video-js:not(.vjs-fullscreen) .vjs-tech {
