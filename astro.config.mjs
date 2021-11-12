@@ -1,3 +1,5 @@
+const { NODE_ENV } = process.env;
+
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
   // Enable the Preact renderer to support Preact JSX components.
@@ -7,6 +9,6 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
     trailingSlash: "ignore",
   },
   buildOptions: {
-    site: "https://stachl.pages.dev",
+    site: NODE_ENV === "production" ? "https://stachl.pages.dev" : "",
   },
 });
