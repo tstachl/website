@@ -2,9 +2,36 @@
 export interface Props {
   src: string;
   alt: string;
-  className: string;
+  className?: string;
+  title?: string;
+  mode?: string;
 }
 
-const { src, alt, className } = Astro.props;
+let { src, alt, title, mode, className = 'rounded-md' } = Astro.props;
+
+if (!src.startsWith('http')) {
+  src = Astro.site.origin + src;
+}
+
+if (title === '') {
+  title = alt;
+}
+
+if (mode === 'float-lg') {
+  className = `${className} float-left -ml-12 w-1/2 mr-8 lg:mr-12`;
+}
+
+if (mode === 'float-md') {
+  className = `${className} float-left -ml-12 w-1/4 mr-8 lg:mr-12`;
+}
+
+if (mode === 'float-sm') {
+  className = `${className} float-left -ml-12 w-1/6 mr-8 lg:mr-12`;
+}
+
+if (mode === 'pull') {
+  className = `${className} -mx-12`;
+}
+
 ---
-<img class={className} data-src={`${Astro.site.origin}${src}`} alt={alt} />
+<img class={className} data-src={src} alt={alt} title={title} />

@@ -11,30 +11,6 @@
   @apply -mx-12;
 }
 
-.image-float {
-  @apply float-left -ml-12;
-}
-
-.image-float.lg {
-  @apply w-1/2;
-}
-
-.image-float.md {
-  @apply w-1/4;
-}
-
-.image-float.sm {
-  @apply w-1/6;
-}
-
-.prose .image-float img {
-  @apply mt-0;
-}
-
-.prose img {
-  @apply rounded-md;
-}
-
 .youtube-link {
   @apply block relative after:absolute after:top-1/2 after:left-1/2 after:w-14 after:h-14 after:-ml-7 after:-mt-7 after:bg-opacity-60 after:bg-gray-100 after:rounded-2xl;
 }
@@ -61,12 +37,8 @@
   content: url(/images/videos/play.svg);
 }
 
-.prose .video-js {
-  position: absolute !important;
-}
-
-.prose .video-js video {
-  @apply m-0;
+.prose video {
+  @apply m-0 !important;
 }
 
 .video-js:not(.vjs-fullscreen) .vjs-tech {

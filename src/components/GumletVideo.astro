@@ -1,0 +1,29 @@
+---
+export interface Props {
+  url: string;
+}
+
+const { url } = Astro.props;
+
+const id = url.split('/')
+              .filter((el) => !(
+                el === '' ||
+                el.startsWith('https') ||
+                el.startsWith('video') ||
+                el.includes('.')
+              )).join('/');
+const baseUrl = `https://video.gumlet.io/${id}`;
+const poster  = `${baseUrl}/thumbnail-1-0.png`;
+const sources = [url, `${baseUrl}/download.mp4`];
+---
+
+<div class="aspect-w-16 aspect-h-9">
+  <video
+    class="h-full w-full"
+    poster={poster}
+    preload="auto"
+    controls>
+    {sources.map((src) => <source src={src} />)}
+    Your browser does not support the video tag.
+  </video>
+</div>

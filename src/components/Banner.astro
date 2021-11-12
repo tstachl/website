@@ -1,6 +1,5 @@
 ---
-import BannerImage from '../components/BannerImage.astro';
-import BannerVideo from '../components/BannerVideo.astro';
+import Image from '../components/Image.astro';
 
 export interface Props {
   srcs: Array<string>;
@@ -9,11 +8,9 @@ export interface Props {
 const { srcs } = Astro.props;
 ---
 <div class="w-full h-96 flex flex-row gap-4 mb-4">
-  {srcs.map((el) => {
-    if (el.startsWith('https://video.gumlet')) {
-      return <BannerVideo src={el} />
-    }
-
-    return <BannerImage src={el} />
-  })}
+  {srcs.map((el) => (
+    <div class="h-full flex-1">
+      <Image className="rounded-md object-cover h-full w-full" src={el} alt="" />
+    </div>
+  ))}
 </div>

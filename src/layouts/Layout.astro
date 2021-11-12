@@ -1,6 +1,7 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Head from '../components/layout/Head.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
 
 export interface Props {
   title: string;
@@ -15,70 +16,20 @@ if (!title.endsWith('Thomas Stachl')) title += ' - Thomas Stachl';
 
 ---
 <html lang="en">
-  <head>
-    <!-- Global Metadata -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-
-    <!-- Primary Meta Tags -->
-    <title>{title}</title>
-    <meta name="title" content={title} />
-    <meta name="description" content={description} />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={permalink} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="/thomas.png?ver=1" />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={permalink} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content="/thomas.png?ver=1" />
-
-    <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href={Astro.resolve("../styles/global.css")}>
-
-    <!-- Theme Toggle -->
-    <script type="text/javascript">
-      // in the header and executed before the page is loaded
-      if (localStorage.theme === 'dark' || (
-          !('theme' in localStorage) 
-          && window.matchMedia('(prefers-color-scheme: dark)').matches
-        )) {
-          document.documentElement.classList.add('dark');
-        }
-    </script>
-    <!-- Gumlet -->
-    <script type="text/javascript">
-        window.GUMLET_CONFIG = {
-            hosts: [{
-                current: "stachl.pages.dev",
-                gumlet: "stachl.gumlet.io"
-            }],
-            lazy_load: true
-        };
-        (function(){d=document;s=d.createElement("script");s.src="https://cdn.gumlet.com/gumlet.js/2.1/gumlet.min.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
-    </script>
-
-    <!-- Video.js -->
-    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet">
-    <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet">
-  </head>
+  <Head title={title} description={description} permalink={permalink} />
 
   <body class="min-h-screen md:text-lg lg:text-xl
     bg-gray-100 text-gray-800 
     dark:bg-gray-900 dark:text-gray-300">
     <Header categories={categories} />
+
     <main class="md:mx-auto max-w-screen-lg pt-14 px-4">
       <slot />
     </main>
+
     <Footer />
+
     <script>window.HELP_IMPROVE_VIDEOJS = false;</script>
     <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
   </body>

@@ -6,9 +6,11 @@ banner:
   - /images/christin-and-thomas-miming-heart-infront-of-sun.jpg
 description: "Today marks the day my big sister official became a published author. As always, she is a true inspiration for what's possible in everything she does. But growing up with her wasn't always easy ..."
 category: relationship
+setup: |
+  import Image from "../../components/Image.astro";
 ---
 
-<Image title="Christin and her dog Neyla acting on stage" alt="Christin and her dog Neyla acting on stage" src="/images/christin-and-her-dog-neyla.jpg" mode="float" size="lg" />
+<Image title="Christin and her dog Neyla acting on stage" alt="Christin and her dog Neyla acting on stage" src="/images/christin-and-her-dog-neyla.jpg" mode="float-lg" />
 
 It's been a wild ride growing up with a big sister. For the first few years of my life, I couldn't do anything wrong. I always was the good boy, and she was the bad girl. But then she decided to become a good girl. No matter what it takes.
 

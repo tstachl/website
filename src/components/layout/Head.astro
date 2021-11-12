@@ -1,0 +1,65 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  permalink: string;
+}
+
+let { title, description, permalink } = Astro.props;
+
+if (!title.endsWith('Thomas Stachl')) title += ' - Thomas Stachl';
+---
+<head>
+  <!-- Global Metadata -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <!-- Primary Meta Tags -->
+  <title>{title}</title>
+  <meta name="title" content={title} />
+  <meta name="description" content={description} />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={permalink} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="/thomas.png?ver=1" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={permalink} />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
+  <meta property="twitter:image" content="/thomas.png?ver=1" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" type="text/css" href={Astro.resolve("../../styles/global.css")}>
+
+  <!-- Theme Toggle -->
+  <script type="text/javascript">
+    // in the header and executed before the page is loaded
+    if (localStorage.theme === 'dark' || (
+        !('theme' in localStorage) 
+        && window.matchMedia('(prefers-color-scheme: dark)').matches
+      )) {
+        document.documentElement.classList.add('dark');
+      }
+  </script>
+  <!-- Gumlet -->
+  <script type="text/javascript">
+      window.GUMLET_CONFIG = {
+          hosts: [{
+              current: "stachl.pages.dev",
+              gumlet: "stachl.gumlet.io"
+          }],
+          lazy_load: true
+      };
+      (function(){d=document;s=d.createElement("script");s.src="https://cdn.gumlet.com/gumlet.js/2.1/gumlet.min.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+  </script>
+
+  <!-- Video.js -->
+  <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet">
+  <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet">
+</head>
