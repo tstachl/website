@@ -14,6 +14,6 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
         ? "https://stachl.pages.dev"
         : NODE_ENV === "preview"
         ? `https://${CF_PAGES_BRANCH}.stachl.pages.dev`
-        : "",
+        : "http://localhost:3000",
   },
 });

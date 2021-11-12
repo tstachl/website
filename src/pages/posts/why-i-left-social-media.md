@@ -6,6 +6,8 @@ banner:
   - /images/dark-clouds-bright-spot.jpg
 description: "You know tech giants like Facebook and Google do not give too much about privacy. And if you're anything like me, you're wondering: »Why should I give a cr**? I have nothing to hide.« Here are some of my reasons making me care and why I ultimately deleted my profiles."
 category: freedom
+setup: |
+  import YoutubeVideo from "../../components/YoutubeVideo.astro"
 ---
 
 Social Media is everywhere. It has become pervasive, spreading throughout every part of my digital life. And sadly, it doesn't stop there.
@@ -14,7 +16,8 @@ Like spies, those tech giants are following me where ever I go. Tracking my shop
 
 Granted, I prefer getting an ad for life coaching over the newest cleaning supplies. But that's beside the point.
 
-Here are the three primary reasons that made me delete my accounts: 
+Here are the three primary reasons that made me delete my accounts:
+
 ## I just want to own my data
 
 No way, Jose. Are you telling me the data I upload to my social media platforms doesn't actually belong to me? Yes, my friend. That's what I'm saying precisely.
@@ -33,7 +36,7 @@ Apart from those humiliating pictures haunting my future, my present is even mor
 
 Endless scrolling through updates of what my friends are doing is not my favorite pastime. At first, I would think, why didn't I get invited? Then I move to why is my life so dull? I'd still have to click that little thumbs-up button. Because I wouldn't want them to think I'm not happy for their good times. "Fear of missing out" is a phrase I can't remember ever hearing before social media. I'm sure the feeling existed, but it was not as prominent in our culture.
 
-I always felt like I had to post about all the good things happening in my life. I have those moments as well, ya know. 
+I always felt like I had to post about all the good things happening in my life. I have those moments as well, ya know.
 
 One thing that helped me a lot with taming my monkey brain was learning about thought management. Thoughts create feelings; feelings drive actions. The more I felt I was missing out, the more I scrolled to see what I missed.
 
@@ -45,7 +48,7 @@ After hiking parts of the Pacific Crest Trail and posting many pictures, I decid
 
 In 2020, I actually started working on an AI project called Pilina. The idea was to randomly remind the user to think positive, powerful thoughts. As well as learn from the user and ultimately create a community where people can help lift each other up. This idea was further reinforced by watching the "Social Dilemma" on Netflix.
 
-https://youtu.be/uaaC57tcci0
+<YoutubeVideo url="https://youtu.be/uaaC57tcci0" />
 
 Life was constantly changing, and my priorities did as well. By year-end, I did one last push on Pilina before putting the project on pause to work on financial freedom.
 
@@ -57,4 +60,4 @@ The only app I'll keep using for a few more months is WhatsApp. I have to teach 
 
 Cleaning up my digital life is a journey, and I'm learning more every day. Here is an excellent guide in case you're thinking of doing the same.
 
-https://www.youtube.com/watch?v=Z4p8Tkx1N5g
+<YoutubeVideo url="https://www.youtube.com/watch?v=Z4p8Tkx1N5g" />
