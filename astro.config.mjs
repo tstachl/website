@@ -1,4 +1,4 @@
-const { NODE_ENV } = process.env;
+const { NODE_ENV, CF_PAGES_BRANCH } = process.env;
 
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
@@ -9,6 +9,11 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
     trailingSlash: "ignore",
   },
   buildOptions: {
-    site: NODE_ENV === "production" ? "https://stachl.pages.dev" : "",
+    site:
+      NODE_ENV === "production"
+        ? "https://stachl.pages.dev"
+        : NODE_ENV === "preview"
+        ? `https://${CF_PAGES_BRANCH}.stachl.pages.dev`
+        : "",
   },
 });
