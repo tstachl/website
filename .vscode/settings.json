@@ -23,6 +23,18 @@
         "emotions": ["confident", "optimistic", "analytical"],
         "goals": ["inform"]
       }
+    },
+    {
+      "files": [
+        "**/src/pages/posts/the-three-most-important-salesforce-benefits.md"
+      ],
+      "config": {
+        "audience": "knowledgeable",
+        "dialect": "american",
+        "domain": "casual",
+        "emotions": ["confident", "joyful", "optimistic"],
+        "goals": ["inform"]
+      }
     }
   ],
   "workbench.editor.enablePreview": true,
