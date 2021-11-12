@@ -13,19 +13,9 @@
     "@tailwindcss/aspect-ratio": "^0.3.0",
     "@tailwindcss/forms": "^0.3.4",
     "@tailwindcss/typography": "^0.4.1",
-    "@videojs/themes": "^1.0.1",
-    "astro": "0.21.0-next.2",
-    "get-video-id": "^3.4.1",
-    "node-fetch": "^2.6.5",
-    "node-html-parser": "^5.1.0",
-    "remark-directive": "^2.0.1",
-    "remark-gfm": "^2.0.0",
-    "remark-unwrap-images": "^3.0.1",
+    "astro": "0.21.0-next.3",
     "snowpack": "^3.8.8",
-    "svelte": "^3.44.1",
     "tailwindcss": "^2.2.19",
-    "unist-util-visit": "^4.1.0",
-    "autoprefixer": "^10.4.0",
-    "video.js": "^7.15.4"
+    "autoprefixer": "^10.4.0"
   }
 }
