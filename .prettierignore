@@ -1,0 +1,6 @@
+**/dist
+**/node_modules
+**/.vercel
+.github
+.changeset
+README.md
