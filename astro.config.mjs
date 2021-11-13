@@ -17,5 +17,6 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
         : CF_PAGES_BRANCH !== undefined
         ? `https://${CF_PAGES_BRANCH}.stachl.pages.dev`
         : "http://localhost:3000",
+    pageUrlFormat: "file",
   },
 });
