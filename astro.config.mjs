@@ -1,4 +1,4 @@
-const { CF_PAGES_BRANCH } = process.env;
+const { CF_PAGES_BRANCH, DOMAIN } = process.env;
 
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
@@ -11,7 +11,9 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
   buildOptions: {
     site:
       CF_PAGES_BRANCH === "master"
-        ? "https://stachl.pages.dev"
+        ? DOMAIN !== undefined
+          ? DOMAIN
+          : "https://stachl.pages.dev"
         : CF_PAGES_BRANCH !== undefined
         ? `https://${CF_PAGES_BRANCH}.stachl.pages.dev`
         : "http://localhost:3000",

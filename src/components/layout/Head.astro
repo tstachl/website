@@ -6,6 +6,9 @@ export interface Props {
 }
 
 let { title, description, permalink } = Astro.props;
+let { DOMAIN } = process.env;
+
+DOMAIN = DOMAIN ? DOMAIN.split('/').pop() : "stachl.pages.dev";
 
 if (!title.endsWith('Thomas Stachl')) title += ' - Thomas Stachl';
 ---
@@ -43,7 +46,7 @@ if (!title.endsWith('Thomas Stachl')) title += ' - Thomas Stachl';
   </script>
 
   <!-- Gumlet -->
-  <script type="text/javascript">
-    window.GUMLET_CONFIG={hosts:[{current:"stachl.pages.dev",gumlet:"stachl.gumlet.io"}],lazy_load:!0},d=document,s=d.createElement("script"),s.src="https://cdn.gumlet.com/gumlet.js/2.1/gumlet.min.js",s.async=1,d.getElementsByTagName("head")[0].appendChild(s);
+  <script type="text/javascript" id="g" data-domain={DOMAIN}>
+    window.GUMLET_CONFIG={hosts:[{current:document.getElementById('g').dataset.domain,gumlet:"stachl.gumlet.io"}],lazy_load:!0},d=document,s=d.createElement("script"),s.src="https://cdn.gumlet.com/gumlet.js/2.1/gumlet.min.js",s.async=1,d.getElementsByTagName("head")[0].appendChild(s);
   </script>
 </head>
