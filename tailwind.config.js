@@ -9,7 +9,10 @@ const em = (px, base) => `${round(px / base)}em`;
 
 module.exports = {
   mode: "jit",
-  purge: ["./public/**/*.html", "./src/**/*.{astro,js,jsx,ts,tsx,vue,svelte}"],
+  purge: [
+    "./public/**/*.html",
+    "./src/**/*.{astro,js,jsx,ts,tsx,vue,svelte,md}",
+  ],
   darkMode: "class",
   theme: {
     extend: {
