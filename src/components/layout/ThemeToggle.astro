@@ -10,21 +10,5 @@
 </label>
 
 <script>
-  const toggleInput = document.querySelector(".theme-toggle input");
-  // this just checks if we have dark mode enabled and checks the toggle
-  if (document.documentElement.classList.contains('dark')) {
-    toggleInput.click();
-  }
-
-  // this takes care of the changes and stores them in localStorage
-  toggleInput.addEventListener("change", (e) => {
-    console.log('changed', toggleInput.checked, e.target.checked);
-    if (e.target.checked) {
-      document.documentElement.classList.add('dark');
-      localStorage.theme = 'dark';
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.theme = 'light';
-    }
-  });
+const toggleInput=document.querySelector(".theme-toggle input");document.documentElement.classList.contains("dark")&&(toggleInput.checked=!0),toggleInput.addEventListener("change",e=>{console.log("changed",toggleInput.checked,e.target.checked),e.target.checked?(document.documentElement.classList.add("dark"),localStorage.theme="dark"):(document.documentElement.classList.remove("dark"),localStorage.theme="light")});
 </script>
