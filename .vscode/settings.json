@@ -1,42 +1,25 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "insertDateString.format": "YYYY-MM-DDThh:mm:ssZZZ",
+  "grammarly.audience": "knowledgeable",
+  "grammarly.dialect": "american",
   "grammarly.domain": "casual",
+  "grammarly.emotions": ["confident", "optimistic", "joyful", "analytical"],
+  "grammarly.goals": ["inform"],
   "grammarly.showExamples": true,
   "grammarly.autoActivate": true,
   "grammarly.showUsernameInStatusBar": true,
   "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 80,
   "[markdown]": {
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 80,
     "editor.quickSuggestions": false
   },
-  "editor.wordWrapColumn": 80,
-  "grammarly.overrides": [
-    {
-      "files": ["**/src/pages/posts/token-valuation.md"],
-      "config": {
-        "audience": "knowledgeable",
-        "dialect": "american",
-        "domain": "casual",
-        "emotions": ["confident", "optimistic", "analytical"],
-        "goals": ["inform"]
-      }
-    },
-    {
-      "files": [
-        "**/src/pages/posts/the-three-most-important-salesforce-benefits.md"
-      ],
-      "config": {
-        "audience": "knowledgeable",
-        "dialect": "american",
-        "domain": "casual",
-        "emotions": ["confident", "joyful", "optimistic"],
-        "goals": ["inform"]
-      }
-    }
-  ],
   "workbench.editor.enablePreview": true,
   "workbench.editor.enablePreviewFromCodeNavigation": true,
   "workbench.editor.enablePreviewFromQuickOpen": true
