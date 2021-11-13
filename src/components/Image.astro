@@ -9,6 +9,8 @@ export interface Props {
 
 let { src, alt, title, mode, className = 'rounded-md' } = Astro.props;
 
+let container = '';
+
 if (!src.startsWith('http')) {
   src = Astro.site.origin + src;
 }
@@ -30,8 +32,11 @@ if (mode === 'float-sm') {
 }
 
 if (mode === 'pull') {
-  className = `${className} -mx-12`;
+  container = '-mx-12';
+  className = `${className} w-full`;
 }
 
 ---
-<img class={className} data-src={src} alt={alt} title={title} />
+<div class={container}>
+  <img class={className} data-src={src} alt={alt} title={title} />
+</div>

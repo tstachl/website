@@ -11,6 +11,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      screens: {
+        xs: "400px",
+      },
       boxShadow: {
         toggle: "0 0 2px 3px rgba(255, 55, 74, var(--tw-text-opacity))",
       },
