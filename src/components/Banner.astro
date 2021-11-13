@@ -7,7 +7,7 @@ export interface Props {
 
 const { srcs } = Astro.props;
 ---
-<div class="w-full h-96 flex flex-row gap-4 mb-4">
+<div class="w-full h-96 flex-row gap-4 mb-4 hidden js:flex">
   {srcs.map((el) => (
     <div class="h-full flex-1">
       <Image className="rounded-md object-cover h-full w-full" src={el} alt="banner image for this post" />

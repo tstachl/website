@@ -9,7 +9,7 @@ export interface Props {
 
 let { src, alt, title, mode, className = 'rounded-md' } = Astro.props;
 
-let container = '';
+let container = 'hidden js:block';
 
 if (!src.startsWith('http')) {
   src = Astro.site.origin + src;
@@ -32,7 +32,7 @@ if (mode === 'float-sm') {
 }
 
 if (mode === 'pull') {
-  container = '-mx-12';
+  container = `${container} -mx-12`;
   className = `${className} w-full`;
 }
 

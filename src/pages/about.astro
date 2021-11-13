@@ -8,8 +8,8 @@ interface MarkdownFrontmatter {
   category: string;
 }
 
-const title = 'About Thomas Stachl';
-const description = 'A story of successes and failures from Austrian emigrant and nomad.';
+const title = 'About Thomas';
+const description = `A story of successes and failures from Austrian emigrant going nomad. «Love the life you're living.» Those words have a special meaning to me. The following is a tiny excerpt of my story over the last 12 years.`;
 const permalink = Astro.request.canonicalURL.toString();
 
 let categories = Astro.fetchContent<MarkdownFrontmatter>('./posts/*.md')
@@ -90,7 +90,7 @@ The healing I was allowed to feel gave me new strength in my mission to help oth
 
 I dove deep into the rabbit hole of the economy to understand and make better investment decisions. And within a year, I reached my goal of financial freedom.
  
-My life has been shaped by so many people and so many circumstances. I would have to write a book of thank yous to cover everything. So instead of doing that, I'm just going to say, "Gracias a mi Familia!" I love you all and will never forget you.
+My life has been shaped by so many people and so many circumstances. I could write a book of "Thank yous" to cover everyone and everything. So instead of doing that, I'm just going to say, "Gracias a mi Familia!" I love you all and will never forget you.
 
 So what's next? Many projects. But first and foremost, when I retire next year, I'm going to go on a quest to become a Curandero. I'm going into the Amazonian jungle to learn as much as I can about plants and their healing properties. And along the way, I'll be sharing my learnings on this blog.
       </Markdown>
