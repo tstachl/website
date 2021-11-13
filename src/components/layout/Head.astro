@@ -40,13 +40,10 @@ if (!title.endsWith('Thomas Stachl')) title += ' - Thomas Stachl';
   <!-- Styles -->
   <link rel="stylesheet" type="text/css" href={Astro.resolve("../../styles/global.css")}>
 
-  <!-- Theme Toggle -->
-  <script type="text/javascript">
-    "dark"!==localStorage.theme&&("theme"in localStorage||!window.matchMedia("(prefers-color-scheme: dark)").matches)||document.documentElement.classList.add("dark");
-  </script>
-
-  <!-- Gumlet -->
+  <!-- Theme Toggle & Gumlet -->
   <script type="text/javascript" id="g" data-domain={DOMAIN}>
+    document.documentElement.classList.add('js');
+    "dark"!==localStorage.theme&&("theme"in localStorage||!window.matchMedia("(prefers-color-scheme: dark)").matches)||document.documentElement.classList.add("dark");
     window.GUMLET_CONFIG={hosts:[{current:document.getElementById('g').dataset.domain,gumlet:"stachl.gumlet.io"}],lazy_load:!0},d=document,s=d.createElement("script"),s.src="https://cdn.gumlet.com/gumlet.js/2.1/gumlet.min.js",s.async=1,d.getElementsByTagName("head")[0].appendChild(s);
   </script>
 </head>

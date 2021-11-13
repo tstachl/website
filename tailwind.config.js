@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin");
+
 const round = (num) =>
   num
     .toFixed(7)
@@ -104,5 +106,12 @@ module.exports = {
     require("@tailwindcss/typography"),
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/forms"),
+    plugin(function ({ addVariant }) {
+      addVariant("js", ({ container, separator }) => {
+        container.walkRules((rule) => {
+          rule.selector = `html.js .js\\${separator}${rule.selector.slice(1)}`;
+        });
+      });
+    }),
   ],
 };
