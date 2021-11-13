@@ -3,7 +3,8 @@ layout: ../../layouts/Post.astro
 title: How I evaluate Crypto and Metaverse projects before investing
 date: 2021-11-02T17:34:15-07:00
 banner:
-  - /images/desk-with-do-more-on-computer-carl-heyerdahl-unsplash.jpg
+  src: /images/desk-with-do-more-on-computer-carl-heyerdahl-unsplash.jpg
+  alt: "Desk with computer saying 'Do More' by Carl Heyerdahl on Unsplash"
 description: "Fear of missing out? Is that how you make investment decisions? No worries, I'm right there with you. Here is my first attempt at a playbook to make fewer mistakes with my investment decisions."
 category: growth
 ---

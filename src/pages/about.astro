@@ -15,13 +15,16 @@ const permalink = Astro.request.canonicalURL.toString();
 let categories = Astro.fetchContent<MarkdownFrontmatter>('./posts/*.md')
                       .map((post) => post.category);
 
-const banner = ['/images/thomas-spreading-his-wings-over-the-cascade-mountains-on-old-snowy.jpg'];
+const banner = {
+  src: '/images/thomas-spreading-his-wings-over-the-cascade-mountains-on-old-snowy.jpg',
+  alt: 'Thomas spreading his wings over the cascade mountains on old snowy',
+};
 
 ---
 <Layout title={title} description={description} permalink={permalink} categories={categories}>
   <article class="mx-8 mb-24">
     <div class="-mx-8">
-      <Banner srcs={banner} />
+      <Banner src={banner.src} alt={banner.alt} />
     </div>
     <section class="prose dark:prose-dark lg:prose-lg xl:prose-xl 2xl:prose-2xl mt-8 lg:mt-14">
       <h1>{title}</h1>

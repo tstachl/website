@@ -3,7 +3,8 @@ layout: ../../layouts/Post.astro
 title: Why I left Social Media
 date: 2021-10-31T12:00:15-07:00
 banner:
-  - /images/dark-clouds-bright-spot.jpg
+  src: /images/dark-clouds-bright-spot.jpg
+  alt: Dark clouds with a clear sky behind them
 description: "You know tech giants like Facebook and Google do not give too much about privacy. And if you're anything like me, you're wondering: »Why should I give a cr**? I have nothing to hide.« Here are some of my reasons making me care and why I ultimately deleted my profiles."
 category: freedom
 setup: |

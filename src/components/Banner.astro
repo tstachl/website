@@ -2,15 +2,14 @@
 import Image from '../components/Image.astro';
 
 export interface Props {
-  srcs: Array<string>;
+  src: string;
+  alt: string;
 }
 
-const { srcs } = Astro.props;
+const { src, alt } = Astro.props;
 ---
 <div class="w-full h-96 flex-row gap-4 mb-4 hidden js:flex">
-  {srcs.map((el) => (
-    <div class="h-full flex-1">
-      <Image className="rounded-md object-cover h-full w-full" src={el} alt="banner image for this post" />
-    </div>
-  ))}
+  <div class="h-full flex-1">
+    <Image className="rounded-md object-cover h-full w-full" src={src} alt={alt} width="992" height="384" />
+  </div>
 </div>

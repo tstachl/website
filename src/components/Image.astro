@@ -5,9 +5,11 @@ export interface Props {
   className?: string;
   title?: string;
   mode?: string;
+  width?: string;
+  height?: string;
 }
 
-let { src, alt, title, mode, className = 'rounded-md' } = Astro.props;
+let { src, alt, title, mode, width, height, className = 'rounded-md' } = Astro.props;
 
 let container = 'hidden js:block';
 
@@ -15,7 +17,7 @@ if (!src.startsWith('http')) {
   src = Astro.site.origin + src;
 }
 
-if (title === '') {
+if (title === undefined || title === '') {
   title = alt;
 }
 
@@ -38,5 +40,5 @@ if (mode === 'pull') {
 
 ---
 <div class={container}>
-  <img class={className} data-src={src} alt={alt} title={title} />
+  <img class={className} data-src={src} alt={alt} title={title} width={width} height={height} />
 </div>

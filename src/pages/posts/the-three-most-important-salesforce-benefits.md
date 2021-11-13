@@ -3,7 +3,8 @@ layout: ../../layouts/Post.astro
 title: The three most important Salesforce benefits
 date: 2021-11-12T07:45:26-08:00
 banner:
-  - /images/salesforce-tower-piercing-through-clouds-by-denys-nevozhai-on-unsplash.jpg
+  src: /images/salesforce-tower-piercing-through-clouds-by-denys-nevozhai-on-unsplash.jpg
+  alt: Salesforce tower piercing through the clouds by Denys Nevozhai on Unsplash
 description: "After working at Salesforce for over 10 years, there are three benefits that stand out. If your goal is financial freedom, check these out, they might get you there just a little bit faster ..."
 category: growth
 setup: |

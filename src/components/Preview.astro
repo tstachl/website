@@ -10,7 +10,7 @@ const { post } = Astro.props;
 ---
 <article class="mx-8 mb-8 lg:mb-12">
   <div class="-mx-8">
-    <a href={post.url} rel="bookmark"><Banner srcs={post.banner} /></a>
+    <a href={post.url} rel="bookmark"><Banner src={post.banner.src} alt={post.banner.alt} /></a>
   </div>
   <PostMeta category={post.category} publishDate={post.date} />
   <header class="mb-2">

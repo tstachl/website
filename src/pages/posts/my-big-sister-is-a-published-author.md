@@ -3,7 +3,8 @@ layout: ../../layouts/Post.astro
 title: My big sister is a published author
 date: 2021-11-05T20:27:43-07:00
 banner:
-  - /images/christin-and-thomas-miming-heart-infront-of-sun.jpg
+  src: /images/christin-and-thomas-miming-heart-infront-of-sun.jpg
+  alt: "Christin and Thomas miming a heart infront of the sun"
 description: "Today marks the day my big sister official became a published author. As always, she is a true inspiration for what's possible in everything she does. But growing up with her wasn't always easy ..."
 category: relationship
 setup: |
