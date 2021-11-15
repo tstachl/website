@@ -18,9 +18,10 @@
     "@tailwindcss/forms": "^0.3.4",
     "@tailwindcss/typography": "^0.4.1",
     "astro": "0.21.0-next.3",
+    "autoprefixer": "^10.4.0",
+    "node-fetch": "^2.6.6",
     "rollup": "2.60.0",
     "snowpack": "^3.8.8",
-    "tailwindcss": "^2.2.19",
-    "autoprefixer": "^10.4.0"
+    "tailwindcss": "^2.2.19"
   }
 }
