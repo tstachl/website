@@ -46,4 +46,6 @@ if (!title.endsWith('Thomas Stachl')) title += ' - Thomas Stachl';
     "dark"!==localStorage.theme&&("theme"in localStorage||!window.matchMedia("(prefers-color-scheme: dark)").matches)||document.documentElement.classList.add("dark");
     window.GUMLET_CONFIG={hosts:[{current:document.getElementById('g').dataset.domain,gumlet:"stachl.gumlet.io"}],lazy_load:!0},d=document,s=d.createElement("script"),s.src="https://cdn.gumlet.com/gumlet.js/2.1/gumlet.min.js",s.async=1,d.getElementsByTagName("head")[0].appendChild(s);
   </script>
+
+  <link rel="alternate" type="application/rss+xml" title="Subscribe to Thomas" href="/feed.xml" />
 </head>
