@@ -5,13 +5,6 @@ import Preview from "../../components/Preview.astro"
 // collection
 import categoryData from "../../data/categories.json"
 
-interface MarkdownFrontmatter {
-  date: string;
-  description: string;
-  title: string;
-  category: string;
-}
-
 export function getStaticPaths() {
   const allPosts = Astro.fetchContent('../posts/*.md');
   let allCategoriesUnique = [...new Set(allPosts.map(p => p.category))];
