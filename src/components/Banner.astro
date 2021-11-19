@@ -9,7 +9,5 @@ export interface Props {
 const { src, alt } = Astro.props;
 ---
 <div class="w-full h-96 flex-row gap-4 mb-4 hidden js:flex">
-  <div class="h-full flex-1">
-    <Image className="rounded-md object-cover h-full w-full" src={src} alt={alt} width="343" height="384" />
-  </div>
+    <Image className="rounded-md object-cover h-full w-full" container="hidden js:block h-full flex-1" src={src} alt={alt} width="343" height="384" />
 </div>
