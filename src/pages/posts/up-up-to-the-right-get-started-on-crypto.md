@@ -42,7 +42,9 @@ As you can see in this screenshot, setting up a savings plan with Swan Bitcoin c
 
 Just buying bitcoin is nice, but receiving interest on the bitcoin you own is even nicer. And that's what we're tackling next. With Swan Bitcoin, you can automatically set up a withdrawal address that you want to send your Bitcoin to. And that will be your bitcoin "savings account" with Celsius.
 
-## 2. Bitcoin Savings Account with Celsius
+## ~~2. Bitcoin Savings Account with Celsius~~
+
+**IMPORTANT UPDATE: Don't ever send your Bitcoin anywhere but your own hardware wallet! If possible make it a Coldcard Wallet.**
 
 Celsius Network is a company that specializes in generating [yield](https://www.investopedia.com/terms/y/yield.asp) for their customers. That means you put your Bitcoin into your Celsius account. Celsius lends them to its institutional clients. Those clients pay Celsius for borrowing your Bitcoin. And finally, Celsius pays you.
 
