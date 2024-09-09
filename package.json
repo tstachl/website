@@ -1,28 +1,35 @@
 {
-  "name": "@tstachl/blog",
-  "version": "0.0.1",
-  "private": true,
-  "engines": {
-    "node": ">=14.18.1",
-    "npm": ">=6.14.15"
-  },
+  "name": "@tstachl/website",
+  "type": "module",
+  "version": "0.0.2",
   "scripts": {
     "dev": "astro dev --verbose",
     "start": "astro dev",
-    "build": "astro build && DOMAIN=$DOMAIN ./cleanup.sh",
-    "preview": "astro preview"
+    "build": "astro check && astro build && DOMAIN=$DOMAIN ./cleanup.sh",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/renderer-preact": "0.4.0",
-    "@tailwindcss/aspect-ratio": "^0.4.0",
-    "@tailwindcss/forms": "^0.4.0",
-    "@tailwindcss/typography": "^0.5.1",
-    "astro": "0.22.20",
-    "autoprefixer": "^10.4.2",
-    "gray-matter": "^4.0.3",
-    "node-fetch": "^3.2.0",
-    "rollup": "2.67.0",
-    "snowpack": "^3.8.8",
-    "tailwindcss": "^3.0.18"
+    "@astrojs/check": "^0.9.3",
+    "@astrojs/mdx": "^3.1.5",
+    "@astrojs/rss": "^4.0.7",
+    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/ts-plugin": "^1.10.2",
+    "@tailwindcss/typography": "^0.5.13",
+    "@types/bun": "^1.1.8",
+    "@types/mdast": "^4.0.4",
+    "@types/qs": "^6.9.15",
+    "astro": "^4.13.1",
+    "hast": "^1.0.0",
+    "mdast": "^3.0.0",
+    "prettier-plugin-astro": "^0.14.1",
+    "qs": "^6.13.0",
+    "remark-directive": "^3.0.0",
+    "tailwindcss": "^3.4.6",
+    "typescript": "^5.5.4",
+    "unist-util-remove": "^4.0.0",
+    "unist-util-visit": "^5.0.0",
+    "vfile": "^6.0.3"
   }
 }

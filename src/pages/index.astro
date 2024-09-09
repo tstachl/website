@@ -1,25 +1,19 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Preview from '../components/Preview.astro';
+import type { CollectionEntry } from "astro:content"
+import { getCollection } from "astro:content"
+import { sortPostsByDateDesc } from "@utils/data-utils"
+import { site } from "@content/config"
 
-interface MarkdownFrontmatter {
-  date: string;
-  category: string;
-}
+import Layout from "@layouts/Layout.astro"
+import Preview from "@components/Preview.astro"
 
-const title = 'Thomas Stachl';
-const description = 'A personal blog and creative outlet after leaving social media.';
-const permalink = Astro.request.canonicalURL.toString();
-
-// Data Fetching: List all Markdown posts in the repo.
-
-let allPosts = Astro.fetchContent<MarkdownFrontmatter>('./posts/*.md');
-let categories = allPosts.map((post) => post.category);
-
-allPosts = allPosts.sort((a, b) => {
-  return new Date(b.date).valueOf() - new Date(a.date).valueOf()
-});
+type PostEntry = CollectionEntry<"posts">
+const allPosts = (await getCollection("posts"))
+  .sort(sortPostsByDateDesc)
+  .slice(0, site.postsPerPage || 8)
+const { tagline, description } = site
 ---
-<Layout title={title} description={description} permalink={permalink} categories={categories}>
-  {allPosts.map(p => <Preview post={p} />)}
+
+<Layout title={tagline} description={description}>
+  {allPosts.map((p: PostEntry) => <Preview post={p} />)}
 </Layout>

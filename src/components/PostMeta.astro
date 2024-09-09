@@ -1,20 +1,32 @@
 ---
-export interface Props {
-  category: string;
-  publishDate: string;
+import { type CollectionEntry, getEntry } from "astro:content"
+
+type Props = {
+  post: CollectionEntry<"posts">
 }
 
-// collection
-import categoryData from "../data/categories.json"
-
-let category = categoryData[Astro.props.category];
-let publishDate = Astro.props.publishDate;
+const { post } = Astro.props
+const { date } = post.data
+const category = await getEntry(post.data.category)
 ---
+
 <div class="mb-2 text-sm text-primary lg:mb-4">
   <span class="uppercase">
-    <a href={category.url} rel="category">{category.name}</a>
+    <a href={`/categories/${category.id}`} rel="category"
+      >{category.data.name}</a
+    >
   </span>
-  <span class="relative pl-14 before:absolute before:w-8 before:h-px before:bg-primary before:left-3 before:top-[calc(50%-1px)]">
-    <time datetime={publishDate}>{new Intl.DateTimeFormat('en-US', { month: "long", day: "numeric", year: "numeric" }).format(new Date(publishDate))}</time>
+  <span
+    class="relative pl-14 before:absolute before:w-8 before:h-px before:bg-primary before:left-3 before:top-[calc(50%-1px)]"
+  >
+    <time datetime={date.toString()}
+      >{
+        new Intl.DateTimeFormat("en-US", {
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+        }).format(date)
+      }</time
+    >
   </span>
 </div>

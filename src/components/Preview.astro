@@ -1,33 +1,37 @@
 ---
-import PostMeta from './PostMeta.astro';
-import Banner from './Banner.astro';
+import type { CollectionEntry } from "astro:content"
 
-export interface Props {
-  post: any;
+import Banner from "@components/Banner.astro"
+import PostMeta from "@components/PostMeta.astro"
+
+type Props = {
+  post: CollectionEntry<"posts">
 }
 
-const { post } = Astro.props;
+const { post } = Astro.props
+const { title, description } = post.data
 ---
+
 <article class="mx-8 mb-8 lg:mb-12">
   <div class="-mx-8">
-    <a href={post.url} rel="bookmark"><Banner src={post.banner.src} alt={post.banner.alt} /></a>
+    <a href={`/posts/${post.slug}`} rel="bookmark"><Banner post={post} /></a>
   </div>
-  <PostMeta category={post.category} publishDate={post.date} />
+  <PostMeta post={post} />
   <header class="mb-2">
     <h3 class="text-lg md:text-xl lg:text-2xl font-bold relative lg:pb-4">
-      <a href={post.url} rel="bookmark">{post.title}</a>
+      <a href={`/posts/${post.slug}`} rel="bookmark">{title}</a>
     </h3>
   </header>
-  <p class="mb-2 lg:mb-4">{post.description}</p>
+  <p class="mb-2 lg:mb-4">{description}</p>
   <div class="mb-2 lg:mb-4 relative text-sm">
-    <a href={post.url} rel="bookmark"
-      class="
-        block pl-12 hover:translate-x-3 hover:text-primary transition-all
-
+    <a
+      href={`/posts/${post.slug}`}
+      rel="bookmark"
+      class="block pl-12 hover:translate-x-3 hover:text-primary transition-all
         before:absolute before:left-0 before:block before:top-[calc(50%-1px)]
         before:w-8 before:h-px before:bg-gray-900 dark:before:bg-gray-300
-        hover:before:bg-primary dark:hover:before:bg-primary
-      ">
+        hover:before:bg-primary dark:hover:before:bg-primary"
+    >
       Read More
     </a>
   </div>

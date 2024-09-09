@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content"
+const categories = await getCollection("categories")
+---
+
+<ul
+  class="float-right text-sm uppercase font-bold tracking-wide leading-8 hidden md:flex"
+>
+  {
+    categories.map((category) => (
+      <li class="ml-2">
+        <a
+          class="hover:text-primary"
+          href={`/categories/${category.id}`}
+          aria-label={category.data.name}
+        >
+          {category.data.name}
+        </a>
+      </li>
+    ))
+  }
+</ul>

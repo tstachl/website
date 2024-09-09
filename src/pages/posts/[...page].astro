@@ -1,0 +1,25 @@
+---
+import type { GetStaticPathsOptions, Page } from "astro"
+import { type CollectionEntry, getCollection } from "astro:content"
+
+import Layout from "@layouts/Layout.astro"
+import Pagination from "@components/Pagination.astro"
+import Preview from "@components/Preview.astro"
+
+import { site } from "@content/config"
+import { sortPostsByDateDesc } from "@utils/data-utils"
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const posts = (await getCollection("posts")).sort(sortPostsByDateDesc)
+  return paginate(posts, { pageSize: site.postsPerPage || 8 })
+}
+
+type Props = { page: Page<CollectionEntry<"posts">> }
+
+const { page } = Astro.props
+---
+
+<Layout title="Posts" description="Archive of all the posts">
+  {page.data.map((p) => <Preview post={p} />)}
+  <Pagination page={page} class="my-16 sm:my-24" />
+</Layout>
