@@ -1,17 +1,5 @@
 import type { Config } from "tailwindcss"
 import tailwindTypo from "@tailwindcss/typography"
-// import tailwindForms from "@tailwindcss/forms"
-
-// require("@tailwindcss/typography"),
-// require("@tailwindcss/aspect-ratio"),
-// require("@tailwindcss/forms"),
-// plugin(function ({ addVariant }) {
-//   addVariant("js", ({ container, separator }) => {
-//     container.walkRules((rule) => {
-//       rule.selector = `html.js .js\\${separator}${rule.selector.slice(1)}`;
-//     });
-//   });
-// }),
 
 const round = (num: number) =>
   num
@@ -26,17 +14,7 @@ export default {
     "./src/**/*.{astro,vue,html,js,jsx,md,mdx,ts,tsx}",
     "./src/content/**/*.{md,mdx}",
   ],
-  plugins: [
-    tailwindTypo,
-    // tailwindForms,
-    // plugin(function ({ addVariant }) {
-    //   addVariant("js", ({ container, separator }) => {
-    //     container.walkRules((rule) => {
-    //       rule.selector = `html.js .js\\${separator}${rule.selector.slice(1)}`;
-    //     });
-    //   });
-    // }),
-  ],
+  plugins: [ tailwindTypo ],
   darkMode: "class",
   theme: {
     extend: {
@@ -50,7 +28,7 @@ export default {
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
       },
-      typography(theme) {
+      typography(theme: any) {
         return {
           DEFAULT: {
             css: {

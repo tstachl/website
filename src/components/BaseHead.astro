@@ -15,10 +15,10 @@ const title = [Astro.props.title || description, site.title]
   .filter(Boolean)
   .join(" | ")
 const canonicalURL = new URL(Astro.request.url, Astro.site)
-const resolvedImage = {
-  // src: getImagePath({ url: canonicalURL, site: Astro.site }),
-  alt: title,
-}
+// const resolvedImage = {
+//   src: getImagePath({ url: canonicalURL, site: Astro.site }),
+//   alt: title,
+// }
 ---
 
 <!-- High Priority Global Metadata -->

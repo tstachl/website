@@ -27,7 +27,7 @@ type Props = {
   nextPost: Post
 }
 
-const { post, prevPost, nextPost } = Astro.props
+const { post } = Astro.props
 const { title, description } = post.data
 const { Content } = await post.render()
 ---

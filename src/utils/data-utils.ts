@@ -46,7 +46,7 @@ export function sortCategoryByNameAsc(
 export function getAllCategories(posts: CollectionEntry<"posts">[]) {
   const categories: string[] = [
     ...new Set(
-      posts.flatMap((post) => post.data.category || []).filter(Boolean)
+      posts.flatMap((post) => post.data.category.id || null).filter(Boolean)
     ),
   ]
   return categories.map(nameAndSlug).filter(filterBySlug)
