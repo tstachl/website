@@ -1,5 +1,5 @@
 ---
-title: The three most important Salesforce benefits
+title: The Three Most Important Salesforce Benefits
 date: 2021-11-12T07:45:26-08:00
 banner:
   src: ./salesforce-tower-piercing-through-clouds-by-denys-nevozhai-on-unsplash.jpg
@@ -7,6 +7,8 @@ banner:
 description: "After working at Salesforce for over 10 years, there are three benefits that stand out. If your goal is financial freedom, check these out, they might get you there just a little bit faster ..."
 category: growth
 ---
+
+# The Three Most Important Salesforce Benefits
 
 Wow, it has been 10+ years working for Salesforce. I've reached financial freedom. Looking back, it's actually a little astounding to me. When I left Europe and moved to the United States, I started from zero. And within 8-9 years, I managed to reach my goal of $800k. I was in the right place at the right time and took advantage of opportunities in the market.
 

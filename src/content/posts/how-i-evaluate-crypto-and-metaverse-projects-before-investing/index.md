@@ -1,5 +1,5 @@
 ---
-title: How I evaluate Crypto and Metaverse projects before investing
+title: How I Evaluate Crypto And Metaverse Projects Before Investing
 date: 2021-11-02T17:34:15-07:00
 banner:
   src: ./desk-with-do-more-on-computer-carl-heyerdahl-unsplash.jpg
@@ -7,6 +7,8 @@ banner:
 description: "Fear of missing out? Is that how you make investment decisions? No worries, I'm right there with you. Here is my first attempt at a playbook to make fewer mistakes with my investment decisions."
 category: growth
 ---
+
+# How I Evaluate Crypto And Metaverse Projects Before Investing
 
 The metaverse is all the rage nowadays. From Axie Infinity to Facebook, both the crypto sphere and Silicon Valley are talking about it. And there is a good reason.
 

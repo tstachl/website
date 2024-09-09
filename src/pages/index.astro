@@ -11,9 +11,9 @@ type PostEntry = CollectionEntry<"posts">
 const allPosts = (await getCollection("posts"))
   .sort(sortPostsByDateDesc)
   .slice(0, site.postsPerPage || 8)
-const { title, description } = site
+const { tagline, description } = site
 ---
 
-<Layout title={title} description={description}>
+<Layout title={tagline} description={description}>
   {allPosts.map((p: PostEntry) => <Preview post={p} />)}
 </Layout>

@@ -2,7 +2,6 @@
 import { site } from "@content/config"
 import { formatCanonicalURL } from "@utils/data-utils"
 import "../styles/global.css"
-// import { getImagePath } from "astro-opengraph-images"
 
 export type Props = {
   title?: string
@@ -15,10 +14,6 @@ const title = [Astro.props.title || description, site.title]
   .filter(Boolean)
   .join(" | ")
 const canonicalURL = new URL(Astro.request.url, Astro.site)
-// const resolvedImage = {
-//   src: getImagePath({ url: canonicalURL, site: Astro.site }),
-//   alt: title,
-// }
 ---
 
 <!-- High Priority Global Metadata -->
@@ -56,13 +51,9 @@ const canonicalURL = new URL(Astro.request.url, Astro.site)
 <meta property="og:url" content={formatCanonicalURL(canonicalURL)} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<!-- <meta property="og:image" content={resolvedImage.src} /> -->
-<!-- <meta property="og:image:alt" content={resolvedImage.alt} /> -->
 
 <!-- X/Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={formatCanonicalURL(canonicalURL)} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<!-- <meta property="twitter:image" content={resolvedImage.src} /> -->
-<!-- <meta name="twitter:image:alt" content={resolvedImage.alt} /> -->

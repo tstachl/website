@@ -47,7 +47,7 @@ const categories = defineCollection({
 export const site: SiteConfig = {
   logo,
   title: "Thomas Stachl",
-  tagline: "Love the life you're living!",
+  tagline: "Love The Life You Are Living!",
   description:
     "A personal blog and creative outlet after leaving social media.",
   postsPerPage: 8,

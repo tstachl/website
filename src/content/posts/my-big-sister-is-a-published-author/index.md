@@ -1,5 +1,5 @@
 ---
-title: My big sister is a published author
+title: My Big Sister Is A Published Author
 date: 2021-11-05T20:27:43-07:00
 banner:
   src: ./christin-and-thomas-miming-heart-infront-of-sun.jpg
@@ -7,6 +7,8 @@ banner:
 description: "Today marks the day my big sister official became a published author. As always, she is a true inspiration for what's possible in everything she does. But growing up with her wasn't always easy ..."
 category: relationship
 ---
+
+# My Big Sister Is A Published Author
 
 ![Christin and her dog Neyla acting on stage](./christin-and-her-dog-neyla.jpg){.float-lg}
 

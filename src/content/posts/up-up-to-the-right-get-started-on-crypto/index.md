@@ -1,5 +1,5 @@
 ---
-title: Up up to the right - Why you should get invested in Crypto
+title: Up Up To The Right - Why You Should Get Invested In Crypto
 date: 2021-11-14T08:52:11-08:00
 banner:
   src: ./bitcoin-gold-coin-held-by-two-fingers-jeremy-bezanger-on-unsplash.jpg
@@ -7,6 +7,8 @@ banner:
 description: "If you're only focused on the price moving up, you're missing the picture. This guide for crypto beginners tells you why you should add Bitcoin to your portfolio and how to get started. Stop wasting your dollars and start investing into an asset that appreciates over time."
 category: freedom
 ---
+
+# Up Up To The Right - Why You Should Get Invested In Crypto
 
 It's actually kind of hilarious: with index funds, I was happy about 10-20% annual growth. In stocks, I'd be glad to see 50% growth. But crypto is different. People seem to get upset if it doesn't go up by at least 200%.
 

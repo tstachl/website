@@ -1,5 +1,5 @@
 ---
-title: Why I left Social Media
+title: Why I Left Social Media
 date: 2021-10-31T12:00:15-07:00
 banner:
   src: ./dark-clouds-bright-spot.jpg
@@ -7,6 +7,8 @@ banner:
 description: "You know tech giants like Facebook and Google do not give too much about privacy. And if you're anything like me, you're wondering: »Why should I give a cr**? I have nothing to hide.« Here are some of my reasons making me care and why I ultimately deleted my profiles."
 category: freedom
 ---
+
+# Why I Left Social Media
 
 Social Media is everywhere. It has become pervasive, spreading throughout every part of my digital life. And sadly, it doesn't stop there.
 
