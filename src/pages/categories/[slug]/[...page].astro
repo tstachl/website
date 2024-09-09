@@ -1,0 +1,52 @@
+---
+import type { GetStaticPathsOptions, Page } from "astro"
+import { type CollectionEntry, getCollection } from "astro:content"
+
+import Layout from "@layouts/Layout.astro"
+import Pagination from "@components/Pagination.astro"
+import Preview from "@components/Preview.astro"
+import { site } from "@content/config"
+import {
+  sortCategoryByNameAsc,
+  sortPostsByDateDesc,
+  getPostsByCategory,
+} from "@utils/data-utils"
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const posts = (await getCollection("posts")).sort(sortPostsByDateDesc)
+  const categories = (await getCollection("categories")).sort(
+    sortCategoryByNameAsc
+  )
+
+  return categories.flatMap((category: CollectionEntry<"categories">) => {
+    const filteredPosts = getPostsByCategory(posts, category.id)
+    return paginate(filteredPosts, {
+      params: { slug: category.id },
+      pageSize: site.postsPerPage || 8,
+    })
+  })
+}
+
+type Props = { page: Page<CollectionEntry<"posts">> }
+
+const { page } = Astro.props
+const data = page.data
+const { slug } = Astro.params
+const allCategories = await getCollection("categories")
+const currentCategory = allCategories.find(
+  (category: CollectionEntry<"categories">) => {
+    return category.id === slug
+  }
+)
+---
+
+<Layout
+  title={`Posts in ${currentCategory?.data.name}`}
+  description={currentCategory?.data.description}
+>
+  <h1 class="text-center text-4xl font-bold mb-14">
+    {currentCategory?.data.name}
+  </h1>
+  {data.map((p) => <Preview post={p} />)}
+  <Pagination page={page} class="my-16 sm:my-24" />
+</Layout>

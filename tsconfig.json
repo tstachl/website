@@ -1,0 +1,31 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": [
+      "mdast-util-to-hast",
+      "mdast-util-directive",
+      "@types/react",
+      "@types/bun"
+    ],
+    "paths": {
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@content/*": ["src/content/*"],
+      "@data/*": ["src/data/*"],
+      "@icons/*": ["src/icons/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@pages/*": ["src/pages/*"],
+      "@plugins/*": ["src/plugins/*"],
+      "@styles/*": ["src/styles/*"],
+      "@templates/*": ["src/templates/*"],
+      "@utils/*": ["src/utils/*"]
+    },
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ],
+    "strictNullChecks": true
+  }
+}

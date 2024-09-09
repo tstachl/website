@@ -1,0 +1,45 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content"
+import Layout from "@layouts/Layout.astro"
+import Banner from "@components/Banner.astro"
+import PostMeta from "@components/PostMeta.astro"
+
+import { sortPostsByDateDesc } from "@utils/data-utils"
+
+export async function getStaticPaths() {
+  const posts = (await getCollection("posts")).sort(sortPostsByDateDesc)
+  const count = posts.length
+
+  return posts.map((post, index) => ({
+    params: { slug: post.slug },
+    props: {
+      post,
+      prevPost: index + 1 !== count ? posts[index + 1] : null,
+      nextPost: index !== 0 ? posts[index - 1] : null,
+    },
+  }));
+}
+
+type Post = CollectionEntry<"posts">
+type Props = {
+  post: Post
+  prevPost: Post
+  nextPost: Post
+}
+
+const { post, prevPost, nextPost } = Astro.props
+const { title, description } = post.data
+const { Content } = await post.render()
+---
+
+<Layout title={title} description={description}>
+  <article class="mx-8 mb-24">
+    <div class="-mx-8">
+      <Banner post={post} />
+    </div>
+    <PostMeta post={post} />
+    <section class="prose dark:prose-dark lg:prose-lg xl:prose-xl 2xl:prose-2xl mt-8 lg:mt-14">
+      <Content />
+    </section>
+  </article>
+</Layout>

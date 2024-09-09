@@ -1,13 +1,22 @@
 ---
-import Image from '../components/Image.astro';
+import type { CollectionEntry } from "astro:content"
+import { Image } from "astro:assets"
 
-export interface Props {
-  src: string;
-  alt: string;
+type Props = {
+  post: CollectionEntry<"pages" | "posts">
 }
 
-const { src, alt } = Astro.props;
+const { post } = Astro.props
+const { banner } = post.data
 ---
-<div class="w-full h-96 flex-row gap-4 mb-4 hidden js:flex">
-    <Image className="rounded-md object-cover h-full w-full" container="hidden js:block h-full flex-1" src={src} alt={alt} width="343" height="384" />
+
+<div class="w-full h-96 flex-row gap-4 mb-4">
+  <div class="h-full flex-1">
+    <Image
+      class="rounded-md object-cover h-full w-full"
+      src={banner.src}
+      alt={banner.alt || ""}
+      widths={[240, 360, 480, 720, 1080]}
+    />
+  </div>
 </div>

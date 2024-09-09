@@ -6,3 +6,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.float-lg {
+  @apply float-left -ml-12 w-1/2 mr-8 lg:mr-12;
+}
+
+.float-md {
+  @apply float-left -ml-12 w-1/4 mr-8 lg:mr-12;
+}
+
+.float-sm {
+  @apply float-left -ml-12 w-1/6 mr-8 lg:mr-12;
+}
+
+p:has(.pull) {
+  @apply -mx-12;
+}
+
+.pull {
+  @apply w-full;
+}
+
+.prose hr {
+  @apply mt-8 border-none bg-gradient-to-r h-[1px];
+  @apply from-gray-100 via-gray-200 to-gray-100;
+  @apply dark:from-gray-900 dark:via-gray-800 dark:to-gray-900;
+}

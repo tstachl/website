@@ -1,21 +1,29 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import PostMeta from '../components/PostMeta.astro';
-import Banner from '../components/Banner.astro';
+import Layout from "../layouts/Layout.astro"
+import PostMeta from "../components/PostMeta.astro"
+import Banner from "../components/Banner.astro"
 
 // page
-const { content } = Astro.props;
-const { title, description, date, banner, category } = content;
-const permalink = Astro.request.canonicalURL.toString();
-const categories = [];
+const { content } = Astro.props
+const { title, description, date, banner, category } = content
+const permalink = Astro.request.canonicalURL.toString()
+const categories = []
 ---
-<Layout title={title} description={description} permalink={permalink} categories={categories}>
+
+<Layout
+  title={title}
+  description={description}
+  permalink={permalink}
+  categories={categories}
+>
   <article class="mx-8 mb-24">
     <div class="-mx-8">
       <Banner src={banner.src} alt={banner.alt} />
     </div>
-    <PostMeta category={category} publishDate={date} />
-    <section class="prose dark:prose-dark lg:prose-lg xl:prose-xl 2xl:prose-2xl mt-8 lg:mt-14">
+    <PostMeta post={post} />
+    <section
+      class="prose dark:prose-dark lg:prose-lg xl:prose-xl 2xl:prose-2xl mt-8 lg:mt-14"
+    >
       <h1>{title}</h1>
       <slot />
     </section>

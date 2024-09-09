@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets"
+import Nav from "@components/Nav.astro"
+import Divider from "@components/Divider.astro"
+
+import { site } from "@content/config"
+---
+
+<header class="w-full m-0 p-0 bg-cover bg-bottom">
+  <div class="md:container md:mx-auto pt-8 text-center">
+    {
+      site.logo && site.logo.src ? (
+        <a href="/">
+          <Image
+            class="inline-block h-24 w-24 rounded-full ring-2 ring-gray-900 dark:ring-gray-100"
+            src={site.logo}
+            alt={site.title}
+            width="96"
+            height="96"
+          />
+        </a>
+      ) : (
+        <a
+          href="/"
+          class="font-serif text-2xl leading-tight font-medium sm:text-4xl"
+        >
+          {site.title}
+        </a>
+      )
+    }
+    {
+      site.tagline && (
+        <p class="mt-4 font-bold tracking-tight">{site.tagline}</p>
+      )
+    }
+    <Divider />
+  </div>
+  <div class="md:container md:mx-auto break-normal p-4 flex">
+    <div class="flex-auto font-sans text-2xl font-bold tracking-tighter">
+      <a href="/">Thomas<span class="text-primary">.</span>Stachl</a>
+    </div>
+    <div class="flex-auto">
+      <Nav />
+    </div>
+  </div>
+</header>
